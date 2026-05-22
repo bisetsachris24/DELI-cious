@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="I created Sandwich class with bread type, size, and toasted properties">
+    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Add Drink class with size and flavor properties&#10;Create Size enum with SMALL, MEDIUM, and LARGE options&#10;Implement constructor for drink initialization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Topping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Topping.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,12 +74,30 @@
       <option name="project" value="LOCAL" />
       <updated>1779460593801</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add Topping class with topping types and extra topping support">
+      <option name="closed" value="true" />
+      <created>1779464369426</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1779464369426</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add Drink class with size and flavor properties&#10;Create Size enum with SMALL, MEDIUM, and LARGE options&#10;Implement constructor for drink initialization">
+      <option name="closed" value="true" />
+      <created>1779464667079</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1779464667079</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created initial class structure for DELI-cious,Added package including ui,models and Util.I added foundational model classes including Drink,Sandwich, Chips,Topping,Userinterface,Order and ReceiptWriter." />
     <MESSAGE value="I created Sandwich class with bread type, size, and toasted properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="I created Sandwich class with bread type, size, and toasted properties" />
+    <MESSAGE value="Add Topping class with topping types and extra topping support" />
+    <MESSAGE value="Add Drink class with size and flavor properties&#10;Create Size enum with SMALL, MEDIUM, and LARGE options&#10;Implement constructor for drink initialization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Drink class with size and flavor properties&#10;Create Size enum with SMALL, MEDIUM, and LARGE options&#10;Implement constructor for drink initialization" />
   </component>
 </project>

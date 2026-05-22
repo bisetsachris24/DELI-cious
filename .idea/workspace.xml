@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Created initial class structure for DELI-cious,Added package including ui,models and Util.I added foundational model classes including Drink,Sandwich, Chips,Topping,Userinterface,Order and ReceiptWriter.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Sandwich.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Sandwich.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "bisetsachris24"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/bisetsachris24/DELI-cious.git",
+    "accountId": "c67b3b2f-ef67-4c64-bcee-bb3cb2ddf911"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="3E5964rQd1QuetXTlrkCxHgwiMT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="" />
+      <created>1779457384793</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1779457384793</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Created initial class structure for DELI-cious,Added package including ui,models and Util.I added foundational model classes including Drink,Sandwich, Chips,Topping,Userinterface,Order and ReceiptWriter.">
+      <option name="closed" value="true" />
+      <created>1779458171584</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1779458171584</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created initial class structure for DELI-cious,Added package including ui,models and Util.I added foundational model classes including Drink,Sandwich, Chips,Topping,Userinterface,Order and ReceiptWriter." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created initial class structure for DELI-cious,Added package including ui,models and Util.I added foundational model classes including Drink,Sandwich, Chips,Topping,Userinterface,Order and ReceiptWriter." />
+  </component>
+</project>

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Implement receipt file generation and order saving&#10;Added logic to create uniquely named receipt files using timestamps.&#10;Implemented receipt writing with order summary, date/time, and thank-you message.Used BufferedWriter with try-with-resources for safe file handling.Added exception handling for receipt saving errors and success confirmation messages." />
+    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Add timestamp formatting for unique receipt filenames&#10;Implemented DateTimeFormatter with custom yyyyMMdd-HHmmss pattern.&#10;Generated formatted timestamps using LocalDateTime for receipt file naming. Ensured unique and organized receipt filenames based on date and time." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779812747503</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add timestamp formatting for unique receipt filenames&#10;Implemented DateTimeFormatter with custom yyyyMMdd-HHmmss pattern.&#10;Generated formatted timestamps using LocalDateTime for receipt file naming. Ensured unique and organized receipt filenames based on date and time.">
+      <option name="closed" value="true" />
+      <created>1779813657197</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1779813657197</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -195,6 +203,7 @@
     <MESSAGE value="Added getOrderSummary() method to display a complete customer receipt.&#10;Included detailed sections for sandwiches, drinks, and chips with item summaries.Implemented dynamic total calculation display and empty-order handling for sandwiches. Improved order readability with formatted headers, separators, and item numbering." />
     <MESSAGE value="Add getter methods for order item collections&#10;Implemented getters for sandwiches, drinks, and chips lists.&#10;Improved encapsulation and external access to order data.&#10;Prepared Order class for receipt generation and order management features." />
     <MESSAGE value="Implement receipt file generation and order saving&#10;Added logic to create uniquely named receipt files using timestamps.&#10;Implemented receipt writing with order summary, date/time, and thank-you message.Used BufferedWriter with try-with-resources for safe file handling.Added exception handling for receipt saving errors and success confirmation messages." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement receipt file generation and order saving&#10;Added logic to create uniquely named receipt files using timestamps.&#10;Implemented receipt writing with order summary, date/time, and thank-you message.Used BufferedWriter with try-with-resources for safe file handling.Added exception handling for receipt saving errors and success confirmation messages." />
+    <MESSAGE value="Add timestamp formatting for unique receipt filenames&#10;Implemented DateTimeFormatter with custom yyyyMMdd-HHmmss pattern.&#10;Generated formatted timestamps using LocalDateTime for receipt file naming. Ensured unique and organized receipt filenames based on date and time." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add timestamp formatting for unique receipt filenames&#10;Implemented DateTimeFormatter with custom yyyyMMdd-HHmmss pattern.&#10;Generated formatted timestamps using LocalDateTime for receipt file naming. Ensured unique and organized receipt filenames based on date and time." />
   </component>
 </project>

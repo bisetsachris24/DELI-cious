@@ -8,18 +8,21 @@ public class Drink {
 
     private Size size;
     private String flavor;
+
     // Constructor used to create a drink with a size and flavor.
     public Drink(Size size, String flavor) {
         this.size = size;
         this.flavor = flavor;
     }
+
     public double getPrice() {
         return switch (size) {
-            case SMALL  -> 2.00;
+            case SMALL -> 2.00;
             case MEDIUM -> 2.50;
-            case LARGE  -> 3.00;
+            case LARGE -> 3.00;
         };
     }
+
     // Returns a formatted summary string for receipts or order displays.
     public String getSummary() {
         return String.format("  Drink: %s %s  -  $%.2f%n",
@@ -29,7 +32,12 @@ public class Drink {
 
     //  Getters
 
-    public Size getSize()    { return size; }
-    public String getFlavor() { return flavor; }
+    public Size getSize() {
+        return size;
+    }
+
+    public String getFlavor() {
+        return flavor;
+    }
 
 }

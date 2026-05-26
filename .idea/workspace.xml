@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Create Drink class with pricing and summary functionality&#10;Added Size enum to support SMALL, MEDIUM, and LARGE drink options.&#10;Implemented dynamic pricing logic based on selected drink size.&#10;Added formatted summary output for receipts and order details.&#10;Included getter methods for drink size and flavor properties.">
+    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Build customizable Sandwich model with toppings and pricing system&#10;Implemented sandwich customization with bread type, size, toasted option, and categorized toppings. Added support for meats, cheeses, regular toppings, sauces, and sides using ArrayLists. Created dynamic pricing logic based on sandwich size and premium toppings.Implemented formatted order summary generation for receipts and customer orders. Added validation for sandwich sizes and getter methods for encapsulation.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Drink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Sandwich.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Sandwich.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +46,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.main.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -132,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779805908653</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Build customizable Sandwich model with toppings and pricing system&#10;Implemented sandwich customization with bread type, size, toasted option, and categorized toppings. Added support for meats, cheeses, regular toppings, sauces, and sides using ArrayLists. Created dynamic pricing logic based on sandwich size and premium toppings.Implemented formatted order summary generation for receipts and customer orders. Added validation for sandwich sizes and getter methods for encapsulation.">
+      <option name="closed" value="true" />
+      <created>1779806285147</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1779806285147</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -144,6 +153,7 @@
     <MESSAGE value="Add comprehensive Topping model with pricing logic&#10;Implemented ToppingType enum to support MEAT, CHEESE, REGULAR, SAUCE, and SIDE categories.Added constructors for standard and extra toppings, including support for marking toppings as extra.Created dynamic pricing logic based on sandwich size and topping type using switch expressions.&#10;Implemented separate pricing rules for regular and extra meat/cheese toppings.Added getter and setter methods for topping properties to support encapsulation.Overrode toString() method to display toppings clearly, including extra topping labels." />
     <MESSAGE value="Enhance Chips model with order summary support&#10;Added fixed-price Chips class to represent side items in customer orders.&#10;Implemented getSummary() method to generate formatted receipt-style output for chips.Added getter method for chip type to improve data access and encapsulation.Maintained constant pricing structure using static final PRICE variable." />
     <MESSAGE value="Create Drink class with pricing and summary functionality&#10;Added Size enum to support SMALL, MEDIUM, and LARGE drink options.&#10;Implemented dynamic pricing logic based on selected drink size.&#10;Added formatted summary output for receipts and order details.&#10;Included getter methods for drink size and flavor properties." />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Drink class with pricing and summary functionality&#10;Added Size enum to support SMALL, MEDIUM, and LARGE drink options.&#10;Implemented dynamic pricing logic based on selected drink size.&#10;Added formatted summary output for receipts and order details.&#10;Included getter methods for drink size and flavor properties." />
+    <MESSAGE value="Build customizable Sandwich model with toppings and pricing system&#10;Implemented sandwich customization with bread type, size, toasted option, and categorized toppings. Added support for meats, cheeses, regular toppings, sauces, and sides using ArrayLists. Created dynamic pricing logic based on sandwich size and premium toppings.Implemented formatted order summary generation for receipts and customer orders. Added validation for sandwich sizes and getter methods for encapsulation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Build customizable Sandwich model with toppings and pricing system&#10;Implemented sandwich customization with bread type, size, toasted option, and categorized toppings. Added support for meats, cheeses, regular toppings, sauces, and sides using ArrayLists. Created dynamic pricing logic based on sandwich size and premium toppings.Implemented formatted order summary generation for receipts and customer orders. Added validation for sandwich sizes and getter methods for encapsulation." />
   </component>
 </project>

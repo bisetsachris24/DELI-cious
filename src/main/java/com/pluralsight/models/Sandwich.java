@@ -26,7 +26,7 @@ public class Sandwich {
     // Base sandwich price before toppings are added.
     private double basePrice;
 
-     // Constructor used to create a sandwich with bread type,
+    // Constructor used to create a sandwich with bread type,
 
     public Sandwich(String breadType, int size, boolean toasted) {
         this.breadType = breadType;
@@ -42,8 +42,8 @@ public class Sandwich {
 
         // Determine base sandwich price based on size.
         this.basePrice = switch (size) {
-            case 4  -> 5.50;
-            case 8  -> 7.00;
+            case 4 -> 5.50;
+            case 8 -> 7.00;
             case 12 -> 8.50;
 
             // Throw exception if an invalid sandwich size is entered.

@@ -15,4 +15,11 @@ public class Chips {
     public double getPrice() {
         return PRICE;
     }
+    public String getSummary() {
+        return String.format("  Chips: %s  -  $%.2f%n", chipType, getPrice());
+    }
+
+    // Getter
+
+    public String getChipType() { return chipType; }
 }

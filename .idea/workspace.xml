@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Set up UserInterface menu options and input handling&#10;Added Scanner support for reading customer input from the console.&#10;Created predefined menu option arrays for breads, meats, cheeses, toppings, sauces, sides, and chips. Initialized UserInterface constructor for interactive order processing.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/ui/UserInterface.java" afterDir="false" />
+    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Implement customer order processing workflow&#10;Added processOrder() method to manage the full ordering process.&#10;Integrated options for adding sandwiches, drinks, and chips to an order.&#10;Implemented checkout flow with order completion validation.&#10;Added order cancellation support and invalid menu choice handling.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +195,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779820884824</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Set up UserInterface menu options and input handling&#10;Added Scanner support for reading customer input from the console.&#10;Created predefined menu option arrays for breads, meats, cheeses, toppings, sauces, sides, and chips. Initialized UserInterface constructor for interactive order processing. added comments">
+      <option name="closed" value="true" />
+      <created>1779821030658</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1779821030658</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Implement customer order processing workflow&#10;Added processOrder() method to manage the full ordering process.&#10;Integrated options for adding sandwiches, drinks, and chips to an order.&#10;Implemented checkout flow with order completion validation.&#10;Added order cancellation support and invalid menu choice handling.">
+      <option name="closed" value="true" />
+      <created>1779821233368</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1779821233368</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -215,6 +231,8 @@
     <MESSAGE value="Implement receipt file generation and order saving&#10;Added logic to create uniquely named receipt files using timestamps.&#10;Implemented receipt writing with order summary, date/time, and thank-you message.Used BufferedWriter with try-with-resources for safe file handling.Added exception handling for receipt saving errors and success confirmation messages." />
     <MESSAGE value="Add timestamp formatting for unique receipt filenames&#10;Implemented DateTimeFormatter with custom yyyyMMdd-HHmmss pattern.&#10;Generated formatted timestamps using LocalDateTime for receipt file naming. Ensured unique and organized receipt filenames based on date and time." />
     <MESSAGE value="Set up UserInterface menu options and input handling&#10;Added Scanner support for reading customer input from the console.&#10;Created predefined menu option arrays for breads, meats, cheeses, toppings, sauces, sides, and chips. Initialized UserInterface constructor for interactive order processing." />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up UserInterface menu options and input handling&#10;Added Scanner support for reading customer input from the console.&#10;Created predefined menu option arrays for breads, meats, cheeses, toppings, sauces, sides, and chips. Initialized UserInterface constructor for interactive order processing." />
+    <MESSAGE value="Set up UserInterface menu options and input handling&#10;Added Scanner support for reading customer input from the console.&#10;Created predefined menu option arrays for breads, meats, cheeses, toppings, sauces, sides, and chips. Initialized UserInterface constructor for interactive order processing. added comments" />
+    <MESSAGE value="Implement customer order processing workflow&#10;Added processOrder() method to manage the full ordering process.&#10;Integrated options for adding sandwiches, drinks, and chips to an order.&#10;Implemented checkout flow with order completion validation.&#10;Added order cancellation support and invalid menu choice handling." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement customer order processing workflow&#10;Added processOrder() method to manage the full ordering process.&#10;Integrated options for adding sandwiches, drinks, and chips to an order.&#10;Implemented checkout flow with order completion validation.&#10;Added order cancellation support and invalid menu choice handling." />
   </component>
 </project>

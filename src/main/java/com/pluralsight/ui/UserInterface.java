@@ -4,7 +4,6 @@ import com.pluralsight.models.Order;
 
 import java.util.Scanner;
 
-import static jdk.internal.jimage.decompressor.CompressIndexes.readInt;
 
 public class UserInterface {
     // Scanner object used to read user input from the console.
@@ -104,6 +103,36 @@ public class UserInterface {
             }
         }
     }
+    private int showOrderScreen(Order order) {
+        System.out.println("\n----------------------------------------");
+        System.out.println("              ORDER SCREEN");
+        System.out.println("----------------------------------------");
+
+        // Show current order snapshot (newest first)
+        List<Sandwich> sandwiches = order.getSandwiches();
+        List<Drink> drinks = order.getDrinks();
+        List<Chips> chipsList = order.getChipsList();
+
+        if (!chipsList.isEmpty()) {
+            System.out.println("Current Chips:");
+            for (int i = chipsList.size() - 1; i >= 0; i--) {
+                System.out.print("  " + chipsList.get(i).getSummary());
+            }
+        }
+        if (!drinks.isEmpty()) {
+            System.out.println("Current Drinks:");
+            for (int i = drinks.size() - 1; i >= 0; i--) {
+                System.out.print("  " + drinks.get(i).getSummary());
+            }
+        }
+        if (!sandwiches.isEmpty()) {
+            System.out.printf("Current Sandwiches (%d):%n", sandwiches.size());
+            for (int i = sandwiches.size() - 1; i >= 0; i--) {
+                System.out.printf("  Sandwich #%d:%n", i + 1);
+                System.out.print(sandwiches.get(i).getSummary());
+            }
+        }
 
 
+    }
 }

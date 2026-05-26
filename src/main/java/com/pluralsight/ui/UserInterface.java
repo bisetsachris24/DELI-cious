@@ -143,4 +143,35 @@ public class UserInterface {
         System.out.print("\nEnter your choice: ");
         return readInt();
     }
+    // Add Sandwich
+
+    private void addSandwich(Order order) {
+        System.out.println("\n===== BUILD YOUR SANDWICH =====");
+
+        // 1. Bread
+        System.out.println("\nSelect your bread:");
+        for (int i = 0; i < BREAD_TYPES.length; i++) {
+            System.out.printf("  %d) %s%n", i + 1, BREAD_TYPES[i]);
+        }
+        System.out.print("Choice: ");
+        int breadChoice = readInt();
+        String bread = (breadChoice >= 1 && breadChoice <= BREAD_TYPES.length)
+                ? BREAD_TYPES[breadChoice - 1] : "white";
+
+        // 2. Size
+        System.out.println("\nSelect sandwich size:");
+        System.out.println("  1) 4\" - $5.50");
+        System.out.println("  2) 8\" - $7.00");
+        System.out.println("  3) 12\" - $8.50");
+        System.out.print("Choice: ");
+        int sizeChoice = readInt();
+        int size = switch (sizeChoice) {
+            case 1 -> 4;
+            case 2 -> 8;
+            case 3 -> 12;
+            default -> 8;
+        };
+
+
+    };
 }

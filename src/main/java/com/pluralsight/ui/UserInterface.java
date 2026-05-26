@@ -1,6 +1,10 @@
 package com.pluralsight.ui;
 
+import com.pluralsight.models.Order;
+
 import java.util.Scanner;
+
+import static jdk.internal.jimage.decompressor.CompressIndexes.readInt;
 
 public class UserInterface {
     // Scanner object used to read user input from the console.
@@ -62,5 +66,44 @@ public class UserInterface {
             }
         }
     }
+    // Home Screen
+    // ---------------------------------------------------------------
+
+    private int showHomeScreen() {
+        System.out.println("\n╔══════════════════════════════════════╗");
+        System.out.println("║        Welcome to DELI-cious!        ║");
+        System.out.println("║     Your Custom Sandwich Shop        ║");
+        System.out.println("╚══════════════════════════════════════╝");
+        System.out.println("  1) New Order");
+        System.out.println("  0) Exit");
+        System.out.print("\nEnter your choice: ");
+        return readInt();
+    }
+    // Order flow
+
+    private void processOrder() {
+        Order order = new Order();
+        boolean ordering = true;
+
+        while (ordering) {
+            int choice = showOrderScreen(order);
+            switch (choice) {
+                case 1 -> addSandwich(order);
+                case 2 -> addDrink(order);
+                case 3 -> addChips(order);
+                case 4 -> {
+                    if (checkout(order)) {
+                        ordering = false;
+                    }
+                }
+                case 0 -> {
+                    System.out.println("\nOrder cancelled. Returning to Home Screen.");
+                    ordering = false;
+                }
+                default -> System.out.println("Invalid choice. Please try again.");
+            }
+        }
+    }
+
 
 }

@@ -46,6 +46,8 @@ public class ReceiptWriter {
     }
 
     private static String generateTimestamp() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
+        return LocalDateTime.now().format(formatter);
     }
 }
 

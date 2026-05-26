@@ -63,10 +63,21 @@ public class Topping {
     }
     // Getters
 
-    public String getName() { return name; }
-    public ToppingType getType() { return type; }
-    public boolean isExtra() { return isExtra; }
-    public void setExtra(boolean extra) { isExtra = extra; }
+    public String getName() {
+        return name;
+    }
+
+    public ToppingType getType() {
+        return type;
+    }
+
+    public boolean isExtra() {
+        return isExtra;
+    }
+
+    public void setExtra(boolean extra) {
+        isExtra = extra;
+    }
 
     @Override
     public String toString() {

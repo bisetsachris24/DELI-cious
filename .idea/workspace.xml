@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Add Chips class for order side items&#10;Implement chip type property and fixed pricing&#10;Create constructor and price getter method">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Sandwich.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Sandwich.java" afterDir="false" />
+    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Enhance Chips model with order summary support&#10;Added fixed-price Chips class to represent side items in customer orders.&#10;Implemented getSummary() method to generate formatted receipt-style output for chips.Added getter method for chip type to improve data access and encapsulation.Maintained constant pricing structure using static final PRICE variable.">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Chips.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Chips.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Topping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Topping.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +107,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779803884836</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add comprehensive Topping model with pricing logic&#10;Implemented ToppingType enum to support MEAT, CHEESE, REGULAR, SAUCE, and SIDE categories.Added constructors for standard and extra toppings, including support for marking toppings as extra.Created dynamic pricing logic based on sandwich size and topping type using switch expressions.&#10;Implemented separate pricing rules for regular and extra meat/cheese toppings.Added getter and setter methods for topping properties to support encapsulation.Overrode toString() method to display toppings clearly, including extra topping labels.">
+      <option name="closed" value="true" />
+      <created>1779805390738</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1779805390738</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Enhance Chips model with order summary support&#10;Added fixed-price Chips class to represent side items in customer orders.&#10;Implemented getSummary() method to generate formatted receipt-style output for chips.Added getter method for chip type to improve data access and encapsulation.Maintained constant pricing structure using static final PRICE variable.">
+      <option name="closed" value="true" />
+      <created>1779805479759</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1779805479759</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -117,6 +132,8 @@
     <MESSAGE value="Add Topping class with topping types and extra topping support" />
     <MESSAGE value="Add Drink class with size and flavor properties&#10;Create Size enum with SMALL, MEDIUM, and LARGE options&#10;Implement constructor for drink initialization" />
     <MESSAGE value="Add Chips class for order side items&#10;Implement chip type property and fixed pricing&#10;Create constructor and price getter method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Chips class for order side items&#10;Implement chip type property and fixed pricing&#10;Create constructor and price getter method" />
+    <MESSAGE value="Add comprehensive Topping model with pricing logic&#10;Implemented ToppingType enum to support MEAT, CHEESE, REGULAR, SAUCE, and SIDE categories.Added constructors for standard and extra toppings, including support for marking toppings as extra.Created dynamic pricing logic based on sandwich size and topping type using switch expressions.&#10;Implemented separate pricing rules for regular and extra meat/cheese toppings.Added getter and setter methods for topping properties to support encapsulation.Overrode toString() method to display toppings clearly, including extra topping labels." />
+    <MESSAGE value="Enhance Chips model with order summary support&#10;Added fixed-price Chips class to represent side items in customer orders.&#10;Implemented getSummary() method to generate formatted receipt-style output for chips.Added getter method for chip type to improve data access and encapsulation.Maintained constant pricing structure using static final PRICE variable." />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhance Chips model with order summary support&#10;Added fixed-price Chips class to represent side items in customer orders.&#10;Implemented getSummary() method to generate formatted receipt-style output for chips.Added getter method for chip type to improve data access and encapsulation.Maintained constant pricing structure using static final PRICE variable." />
   </component>
 </project>

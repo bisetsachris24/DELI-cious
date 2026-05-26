@@ -72,6 +72,11 @@ public class Order {
         sb.append("========================================\n");
         return sb.toString();
     }
+    //  Getters
+
+    public List<Sandwich> getSandwiches() { return sandwiches; }
+    public List<Drink>    getDrinks()     { return drinks; }
+    public List<Chips>    getChipsList()  { return chipsList; }
 
 }
  

@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Add timestamp formatting for unique receipt filenames&#10;Implemented DateTimeFormatter with custom yyyyMMdd-HHmmss pattern.&#10;Generated formatted timestamps using LocalDateTime for receipt file naming. Ensured unique and organized receipt filenames based on date and time." />
+    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Set up UserInterface menu options and input handling&#10;Added Scanner support for reading customer input from the console.&#10;Created predefined menu option arrays for breads, meats, cheeses, toppings, sauces, sides, and chips. Initialized UserInterface constructor for interactive order processing.">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/ui/UserInterface.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -185,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779813657197</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Set up UserInterface menu options and input handling&#10;Added Scanner support for reading customer input from the console.&#10;Created predefined menu option arrays for breads, meats, cheeses, toppings, sauces, sides, and chips. Initialized UserInterface constructor for interactive order processing.">
+      <option name="closed" value="true" />
+      <created>1779820884824</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1779820884824</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -204,6 +214,7 @@
     <MESSAGE value="Add getter methods for order item collections&#10;Implemented getters for sandwiches, drinks, and chips lists.&#10;Improved encapsulation and external access to order data.&#10;Prepared Order class for receipt generation and order management features." />
     <MESSAGE value="Implement receipt file generation and order saving&#10;Added logic to create uniquely named receipt files using timestamps.&#10;Implemented receipt writing with order summary, date/time, and thank-you message.Used BufferedWriter with try-with-resources for safe file handling.Added exception handling for receipt saving errors and success confirmation messages." />
     <MESSAGE value="Add timestamp formatting for unique receipt filenames&#10;Implemented DateTimeFormatter with custom yyyyMMdd-HHmmss pattern.&#10;Generated formatted timestamps using LocalDateTime for receipt file naming. Ensured unique and organized receipt filenames based on date and time." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add timestamp formatting for unique receipt filenames&#10;Implemented DateTimeFormatter with custom yyyyMMdd-HHmmss pattern.&#10;Generated formatted timestamps using LocalDateTime for receipt file naming. Ensured unique and organized receipt filenames based on date and time." />
+    <MESSAGE value="Set up UserInterface menu options and input handling&#10;Added Scanner support for reading customer input from the console.&#10;Created predefined menu option arrays for breads, meats, cheeses, toppings, sauces, sides, and chips. Initialized UserInterface constructor for interactive order processing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Set up UserInterface menu options and input handling&#10;Added Scanner support for reading customer input from the console.&#10;Created predefined menu option arrays for breads, meats, cheeses, toppings, sauces, sides, and chips. Initialized UserInterface constructor for interactive order processing." />
   </component>
 </project>

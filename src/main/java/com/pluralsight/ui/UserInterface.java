@@ -24,4 +24,43 @@ public class UserInterface {
     public UserInterface() {
         this.scanner = new Scanner(System.in);
     }
+
+// Main application loop
+// Continuously displays the home screen until the user exits.
+
+
+    public void run() {
+
+        // Controls whether the application continues running.
+        boolean running = true;
+
+        // Keep showing the menu while the program is active.
+        while (running) {
+
+            // Display home screen options and get the user's choice.
+            int choice = showHomeScreen();
+
+            // Process the selected menu option.
+            switch (choice) {
+
+                // Start a new customer order.
+                case 1 -> processOrder();
+
+                // Exit the application.
+                case 0 -> {
+
+                    // Display goodbye message before closing.
+                    System.out.println(
+                            "\nThank you for visiting DELI-cious! Have a delicious day!");
+
+                    running = false;
+                }
+
+                // Handle invalid menu selections.
+                default -> System.out.println(
+                        "Invalid choice. Please try again.");
+            }
+        }
+    }
+
 }

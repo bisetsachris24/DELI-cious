@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Implemented getTotal() method to calculate the complete order price from sandwiches, drinks, and chips. Added order validation to ensure customers cannot place empty orders. Supported flexible ordering by allowing orders with sandwiches, drinks, or chips combinations.">
+    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Add getter methods for order item collections&#10;Implemented getters for sandwiches, drinks, and chips lists.&#10;Improved encapsulation and external access to order data.&#10;Prepared Order class for receipt generation and order management features.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/util/ReceiptWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/util/ReceiptWriter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +156,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779808158244</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added getOrderSummary() method to display a complete customer receipt.&#10;Included detailed sections for sandwiches, drinks, and chips with item summaries.Implemented dynamic total calculation display and empty-order handling for sandwiches. Improved order readability with formatted headers, separators, and item numbering.">
+      <option name="closed" value="true" />
+      <created>1779811681951</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1779811681951</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add getter methods for order item collections&#10;Implemented getters for sandwiches, drinks, and chips lists.&#10;Improved encapsulation and external access to order data.&#10;Prepared Order class for receipt generation and order management features.">
+      <option name="closed" value="true" />
+      <created>1779811789981</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1779811789981</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -170,6 +187,8 @@
     <MESSAGE value="Build customizable Sandwich model with toppings and pricing system&#10;Implemented sandwich customization with bread type, size, toasted option, and categorized toppings. Added support for meats, cheeses, regular toppings, sauces, and sides using ArrayLists. Created dynamic pricing logic based on sandwich size and premium toppings.Implemented formatted order summary generation for receipts and customer orders. Added validation for sandwich sizes and getter methods for encapsulation." />
     <MESSAGE value="Create Order class to manage customer purchases&#10;Added ArrayLists to store sandwiches, drinks, and chips within an order.&#10;Implemented Order constructor to initialize all order item collections.&#10;Prepared foundation for handling customer order totals and receipt generation." />
     <MESSAGE value="Implemented getTotal() method to calculate the complete order price from sandwiches, drinks, and chips. Added order validation to ensure customers cannot place empty orders. Supported flexible ordering by allowing orders with sandwiches, drinks, or chips combinations." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented getTotal() method to calculate the complete order price from sandwiches, drinks, and chips. Added order validation to ensure customers cannot place empty orders. Supported flexible ordering by allowing orders with sandwiches, drinks, or chips combinations." />
+    <MESSAGE value="Added getOrderSummary() method to display a complete customer receipt.&#10;Included detailed sections for sandwiches, drinks, and chips with item summaries.Implemented dynamic total calculation display and empty-order handling for sandwiches. Improved order readability with formatted headers, separators, and item numbering." />
+    <MESSAGE value="Add getter methods for order item collections&#10;Implemented getters for sandwiches, drinks, and chips lists.&#10;Improved encapsulation and external access to order data.&#10;Prepared Order class for receipt generation and order management features." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add getter methods for order item collections&#10;Implemented getters for sandwiches, drinks, and chips lists.&#10;Improved encapsulation and external access to order data.&#10;Prepared Order class for receipt generation and order management features." />
   </component>
 </project>

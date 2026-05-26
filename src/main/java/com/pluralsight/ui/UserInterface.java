@@ -66,7 +66,6 @@ public class UserInterface {
         }
     }
     // Home Screen
-    // ---------------------------------------------------------------
 
     private int showHomeScreen() {
         System.out.println("\n╔══════════════════════════════════════╗");

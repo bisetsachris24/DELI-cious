@@ -134,5 +134,14 @@ public class UserInterface {
         }
 
 
+        System.out.printf("%nRunning Total: $%.2f%n", order.getTotal());
+        System.out.println("----------------------------------------");
+        System.out.println("  1) Add Sandwich");
+        System.out.println("  2) Add Drink");
+        System.out.println("  3) Add Chips");
+        System.out.println("  4) Checkout");
+        System.out.println("  0) Cancel Order");
+        System.out.print("\nEnter your choice: ");
+        return readInt();
     }
 }

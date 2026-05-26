@@ -2,8 +2,7 @@ package com.pluralsight.models;
 
 public class Sandwich {
 
-    // I am creating prperties for sandwich that handles bread type, size and toppings
-    // i
+    // I am creating properties for sandwich that handles bread type, size and toppings
     private String breadType;
     private int size;
     private boolean toasted;

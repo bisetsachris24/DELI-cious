@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Add Drink class with size and flavor properties&#10;Create Size enum with SMALL, MEDIUM, and LARGE options&#10;Implement constructor for drink initialization">
+    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Add Chips class for order side items&#10;Implement chip type property and fixed pricing&#10;Create constructor and price getter method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Sandwich.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Sandwich.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Topping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Topping.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +92,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779464667079</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add Chips class for order side items&#10;Implement chip type property and fixed pricing&#10;Create constructor and price getter method">
+      <option name="closed" value="true" />
+      <created>1779472996759</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1779472996759</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add Chips class for order side items&#10;Implement chip type property and fixed pricing&#10;Create constructor and price getter method">
+      <option name="closed" value="true" />
+      <created>1779803884836</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1779803884836</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -98,6 +116,7 @@
     <MESSAGE value="I created Sandwich class with bread type, size, and toasted properties" />
     <MESSAGE value="Add Topping class with topping types and extra topping support" />
     <MESSAGE value="Add Drink class with size and flavor properties&#10;Create Size enum with SMALL, MEDIUM, and LARGE options&#10;Implement constructor for drink initialization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Drink class with size and flavor properties&#10;Create Size enum with SMALL, MEDIUM, and LARGE options&#10;Implement constructor for drink initialization" />
+    <MESSAGE value="Add Chips class for order side items&#10;Implement chip type property and fixed pricing&#10;Create constructor and price getter method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Chips class for order side items&#10;Implement chip type property and fixed pricing&#10;Create constructor and price getter method" />
   </component>
 </project>

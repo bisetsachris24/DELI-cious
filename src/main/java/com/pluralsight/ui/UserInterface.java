@@ -367,5 +367,26 @@ private void promptForMeats(Sandwich sandwich, int size) {
             return true; // still return to home screen
         }
     }
+// Helper input methods
+    // ---------------------------------------------------------------
 
+    private int readInt() {
+        while (true) {
+            try {
+                String line = scanner.nextLine().trim();
+                return Integer.parseInt(line);
+            } catch (NumberFormatException e) {
+                System.out.print("Please enter a valid number: ");
+            }
+        }
+    }
+
+    private boolean readYesNo() {
+        while (true) {
+            String input = scanner.nextLine().trim().toLowerCase();
+            if (input.equals("yes") || input.equals("y")) return true;
+            if (input.equals("no")  || input.equals("n")) return false;
+            System.out.print("Please enter yes or no: ");
+        }
+    }
 }

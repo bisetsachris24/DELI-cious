@@ -263,5 +263,22 @@ private void promptForMeats(Sandwich sandwich, int size) {
             System.out.println(TOPPINGS[choice - 1] + " added.");
         }
     }
+    private void promptForSauces(Sandwich sandwich) {
+        System.out.println("\nSauces (included, enter 0 when done):");
+        for (int i = 0; i < SAUCES.length; i++) {
+            System.out.printf("  %d) %s%n", i + 1, SAUCES[i]);
+        }
+        while (true) {
+            System.out.print("Add sauce (0 to skip/done): ");
+            int choice = readInt();
+            if (choice == 0) break;
+            if (choice < 1 || choice > SAUCES.length) {
+                System.out.println("Invalid choice.");
+                continue;
+            }
+            sandwich.addSauce(SAUCES[choice - 1]);
+            System.out.println(SAUCES[choice - 1] + " added.");
+        }
+    }
 
 }

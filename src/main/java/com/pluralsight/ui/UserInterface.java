@@ -246,5 +246,22 @@ private void promptForMeats(Sandwich sandwich, int size) {
             System.out.println(cheese + (extra ? " (extra)" : "") + " added.");
         }
     }
+    private void promptForToppings(Sandwich sandwich) {
+        System.out.println("\nRegular toppings (included, enter 0 when done):");
+        for (int i = 0; i < TOPPINGS.length; i++) {
+            System.out.printf("  %d) %s%n", i + 1, TOPPINGS[i]);
+        }
+        while (true) {
+            System.out.print("Add topping (0 to skip/done): ");
+            int choice = readInt();
+            if (choice == 0) break;
+            if (choice < 1 || choice > TOPPINGS.length) {
+                System.out.println("Invalid choice.");
+                continue;
+            }
+            sandwich.addTopping(TOPPINGS[choice - 1]);
+            System.out.println(TOPPINGS[choice - 1] + " added.");
+        }
+    }
 
 }

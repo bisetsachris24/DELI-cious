@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Implement sandwich customization with bread and size selection&#10;Added interactive sandwich builder menu for customer customization.&#10;Implemented bread selection using predefined bread type options.&#10;Added sandwich size selection with pricing display for 4&quot;, 8&quot;, and 12&quot; sandwiches.Included default fallback values for invalid customer input handling.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="&#10;Implemented promptForCheeses() to allow customers to customize sandwich cheeses. Added dynamic cheese pricing display based on sandwich size and extra portions. Integrated input validation and looping for multiple cheese selections. Added support for extra cheese customization with confirmation prompts.">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/ui/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -244,7 +243,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779828010654</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Add interactive meat selection and extra topping support&#10;Implemented promptForMeats() to allow customers to add meats to sandwiches.Added dynamic meat pricing display based on sandwich size and extra portions.Integrated input validation and looping for multiple meat selections.Added support for extra meat customization with confirmation prompts.">
+      <option name="closed" value="true" />
+      <created>1779893719052</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1779893719052</updated>
+    </task>
+    <task id="LOCAL-00025" summary="&#10;Implemented promptForCheeses() to allow customers to customize sandwich cheeses. Added dynamic cheese pricing display based on sandwich size and extra portions. Integrated input validation and looping for multiple cheese selections. Added support for extra cheese customization with confirmation prompts.">
+      <option name="closed" value="true" />
+      <created>1779893813456</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1779893813456</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -269,6 +284,8 @@
     <MESSAGE value="Add dynamic order screen display for current customer items&#10;Implemented showOrderScreen() to display current sandwiches, drinks, and chips in the order. Added formatted order snapshot with newest items displayed first. Improved customer experience with organized order review during checkout flow." />
     <MESSAGE value="Enhance order screen with running total and menu options&#10;Added real-time running total display for customer orders.&#10;Implemented order menu options for sandwiches, drinks, chips, checkout, and cancellation. Integrated user input handling with readInt() for menu navigation." />
     <MESSAGE value="Implement sandwich customization with bread and size selection&#10;Added interactive sandwich builder menu for customer customization.&#10;Implemented bread selection using predefined bread type options.&#10;Added sandwich size selection with pricing display for 4&quot;, 8&quot;, and 12&quot; sandwiches.Included default fallback values for invalid customer input handling." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement sandwich customization with bread and size selection&#10;Added interactive sandwich builder menu for customer customization.&#10;Implemented bread selection using predefined bread type options.&#10;Added sandwich size selection with pricing display for 4&quot;, 8&quot;, and 12&quot; sandwiches.Included default fallback values for invalid customer input handling." />
+    <MESSAGE value="Add interactive meat selection and extra topping support&#10;Implemented promptForMeats() to allow customers to add meats to sandwiches.Added dynamic meat pricing display based on sandwich size and extra portions.Integrated input validation and looping for multiple meat selections.Added support for extra meat customization with confirmation prompts." />
+    <MESSAGE value="&#10;Implemented promptForCheeses() to allow customers to customize sandwich cheeses. Added dynamic cheese pricing display based on sandwich size and extra portions. Integrated input validation and looping for multiple cheese selections. Added support for extra cheese customization with confirmation prompts." />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;Implemented promptForCheeses() to allow customers to customize sandwich cheeses. Added dynamic cheese pricing display based on sandwich size and extra portions. Integrated input validation and looping for multiple cheese selections. Added support for extra cheese customization with confirmation prompts." />
   </component>
 </project>

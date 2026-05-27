@@ -320,5 +320,20 @@ private void promptForMeats(Sandwich sandwich, int size) {
         order.addDrink(new Drink(size, flavor));
         System.out.println("Drink added!");
     }
+// Add chips
+
+    private void addChips(Order order) {
+        System.out.println("\n===== ADD CHIPS - $1.50 =====");
+        for (int i = 0; i < CHIP_TYPES.length; i++) {
+            System.out.printf("  %d) %s%n", i + 1, CHIP_TYPES[i]);
+        }
+        System.out.print("Choice: ");
+        int choice = readInt();
+        String chipType = (choice >= 1 && choice <= CHIP_TYPES.length)
+                ? CHIP_TYPES[choice - 1] : "Classic";
+
+        order.addChips(new Chips(chipType));
+        System.out.println(chipType + " chips added!");
+    }
 
 }

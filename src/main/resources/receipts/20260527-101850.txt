@@ -1,0 +1,24 @@
+DELI-cious Receipt
+Date/Time: 05/27/2026 10:18:50
+
+========================================
+           ORDER SUMMARY
+========================================
+SANDWICHES (1):
+  --- Sandwich #1 ---
+  8" wheat sandwich [TOASTED]
+    Meats: chicken (extra)
+    Cheeses: american (extra)
+    Toppings: lettuce
+    Sauces: mayo
+    Sides: sauce
+    Price: $8.60
+DRINKS:
+  Drink: Medium pink  -  $2.50
+CHIPS:
+  Chips: Salt & Vinegar  -  $1.50
+----------------------------------------
+  TOTAL: $12.60
+========================================
+
+Thank you for choosing DELI-cious!

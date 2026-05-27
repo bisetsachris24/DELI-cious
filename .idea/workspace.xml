@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Implement checkout validation and order confirmation workflow&#10;Added checkout() method to handle final order processing and confirmation.&#10;Implemented validation to prevent empty orders from being submitted.Added order summary display before confirmation or cancellation.Integrated receipt generation and save functionality upon successful checkout.Added customer feedback messages for confirmed and cancelled orders.">
+    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Add helper methods for meat and cheese pricing display&#10;&#10;Implemented getMeatPrice() and getCheesePrice() methods for dynamic topping price calculations.&#10;Added pricing support based on sandwich size and extra topping selections.&#10;Improved menu display by showing accurate meat and cheese pricing during customization.">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/receipts/20260527-101850.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/ui/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +54,26 @@
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.pluralsight.main" />
+      <module name="DELI-cious" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pluralsight.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="" />
@@ -307,14 +330,34 @@
       <option name="project" value="LOCAL" />
       <updated>1779894424589</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Add reusable input validation helper methods,Implemented readInt() to safely handle numeric user input with error checking.Added readYesNo() method for validating yes/no confirmation responses.Improved console interaction by preventing invalid input crashes and prompting users again when needed.">
+      <option name="closed" value="true" />
+      <created>1779894511746</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1779894511746</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Add helper methods for meat and cheese pricing display&#10;Implemented getMeatPrice() and getCheesePrice() methods for dynamic topping price calculations.Added pricing support based on sandwich size and extra topping selections. Improved menu display by showing accurate meat and cheese pricing during customization.">
+      <option name="closed" value="true" />
+      <created>1779894674589</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1779894674589</updated>
+    </task>
+    <task id="LOCAL-00034" summary="final touches">
+      <option name="closed" value="true" />
+      <created>1779894836674</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1779894836674</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add Chips class for order side items&#10;Implement chip type property and fixed pricing&#10;Create constructor and price getter method" />
-    <MESSAGE value="Add comprehensive Topping model with pricing logic&#10;Implemented ToppingType enum to support MEAT, CHEESE, REGULAR, SAUCE, and SIDE categories.Added constructors for standard and extra toppings, including support for marking toppings as extra.Created dynamic pricing logic based on sandwich size and topping type using switch expressions.&#10;Implemented separate pricing rules for regular and extra meat/cheese toppings.Added getter and setter methods for topping properties to support encapsulation.Overrode toString() method to display toppings clearly, including extra topping labels." />
-    <MESSAGE value="Enhance Chips model with order summary support&#10;Added fixed-price Chips class to represent side items in customer orders.&#10;Implemented getSummary() method to generate formatted receipt-style output for chips.Added getter method for chip type to improve data access and encapsulation.Maintained constant pricing structure using static final PRICE variable." />
-    <MESSAGE value="Create Drink class with pricing and summary functionality&#10;Added Size enum to support SMALL, MEDIUM, and LARGE drink options.&#10;Implemented dynamic pricing logic based on selected drink size.&#10;Added formatted summary output for receipts and order details.&#10;Included getter methods for drink size and flavor properties." />
     <MESSAGE value="Build customizable Sandwich model with toppings and pricing system&#10;Implemented sandwich customization with bread type, size, toasted option, and categorized toppings. Added support for meats, cheeses, regular toppings, sauces, and sides using ArrayLists. Created dynamic pricing logic based on sandwich size and premium toppings.Implemented formatted order summary generation for receipts and customer orders. Added validation for sandwich sizes and getter methods for encapsulation." />
     <MESSAGE value="Create Order class to manage customer purchases&#10;Added ArrayLists to store sandwiches, drinks, and chips within an order.&#10;Implemented Order constructor to initialize all order item collections.&#10;Prepared foundation for handling customer order totals and receipt generation." />
     <MESSAGE value="Implemented getTotal() method to calculate the complete order price from sandwiches, drinks, and chips. Added order validation to ensure customers cannot place empty orders. Supported flexible ordering by allowing orders with sandwiches, drinks, or chips combinations." />
@@ -336,6 +379,10 @@
     <MESSAGE value="I Added addDrink() method to allow customers to add drinks to their orders.Implemented drink size selection with pricing display for small, medium, and large options.Added custom flavor input with default fallback value handling.Integrated drink creation and order assignment with confirmation messaging." />
     <MESSAGE value="I Added addChips() method to allow customers to add chips to their orders.&#10;Implemented chip flavor selection menu with predefined chip options.Added default flavor fallback handling for invalid selections. Integrated chip creation and order assignment with confirmation messaging." />
     <MESSAGE value="Implement checkout validation and order confirmation workflow&#10;Added checkout() method to handle final order processing and confirmation.&#10;Implemented validation to prevent empty orders from being submitted.Added order summary display before confirmation or cancellation.Integrated receipt generation and save functionality upon successful checkout.Added customer feedback messages for confirmed and cancelled orders." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement checkout validation and order confirmation workflow&#10;Added checkout() method to handle final order processing and confirmation.&#10;Implemented validation to prevent empty orders from being submitted.Added order summary display before confirmation or cancellation.Integrated receipt generation and save functionality upon successful checkout.Added customer feedback messages for confirmed and cancelled orders." />
+    <MESSAGE value="Add reusable input validation helper methods,Implemented readInt() to safely handle numeric user input with error checking.Added readYesNo() method for validating yes/no confirmation responses.Improved console interaction by preventing invalid input crashes and prompting users again when needed." />
+    <MESSAGE value="Add helper methods for meat and cheese pricing display&#10;Implemented getMeatPrice() and getCheesePrice() methods for dynamic topping price calculations.Added pricing support based on sandwich size and extra topping selections. Improved menu display by showing accurate meat and cheese pricing during customization." />
+    <MESSAGE value="final touches" />
+    <MESSAGE value="Add helper methods for meat and cheese pricing display&#10;&#10;Implemented getMeatPrice() and getCheesePrice() methods for dynamic topping price calculations.&#10;Added pricing support based on sandwich size and extra topping selections.&#10;Improved menu display by showing accurate meat and cheese pricing during customization." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add helper methods for meat and cheese pricing display&#10;&#10;Implemented getMeatPrice() and getCheesePrice() methods for dynamic topping price calculations.&#10;Added pricing support based on sandwich size and extra topping selections.&#10;Improved menu display by showing accurate meat and cheese pricing during customization." />
   </component>
 </project>

@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 
- // Handles all user-facing menus and input prompts for the DELI-cious POS system.
+// Handles all user-facing menus and input prompts for the DELI-cious POS system.
 
 public class UserInterface {
 
@@ -17,14 +17,14 @@ public class UserInterface {
     // Available options (for display)
 
     private static final String[] BREAD_TYPES = {"white", "wheat", "rye", "wrap"};
-    private static final String[] MEATS       = {"steak", "ham", "salami", "roast beef", "chicken", "bacon"};
-    private static final String[] CHEESES     = {"american", "provolone", "cheddar", "swiss"};
-    private static final String[] TOPPINGS    = {"lettuce", "peppers", "onions", "tomatoes",
+    private static final String[] MEATS = {"steak", "ham", "salami", "roast beef", "chicken", "bacon"};
+    private static final String[] CHEESES = {"american", "provolone", "cheddar", "swiss"};
+    private static final String[] TOPPINGS = {"lettuce", "peppers", "onions", "tomatoes",
             "jalapeños", "cucumbers", "pickles", "guacamole", "mushrooms"};
-    private static final String[] SAUCES      = {"mayo", "mustard", "ketchup", "ranch",
+    private static final String[] SAUCES = {"mayo", "mustard", "ketchup", "ranch",
             "thousand islands", "vinaigrette"};
-    private static final String[] SIDES       = {"au jus", "sauce"};
-    private static final String[] CHIP_TYPES  = {"Classic", "BBQ", "Sour Cream & Onion",
+    private static final String[] SIDES = {"au jus", "sauce"};
+    private static final String[] CHIP_TYPES = {"Classic", "BBQ", "Sour Cream & Onion",
             "Salt & Vinegar", "Jalapeño"};
 
     public UserInterface() {
@@ -50,11 +50,11 @@ public class UserInterface {
 
     // Home Screen
 
-
+    // Displays the starting menu of the application.
     private int showHomeScreen() {
         System.out.println("\n╔══════════════════════════════════════╗");
         System.out.println("║        Welcome to DELI-cious!        ║");
-        System.out.println("║     Your Custom Sandwich Shop 🥪     ║");
+        System.out.println("║     Your Custom Sandwich Shop        ║");
         System.out.println("╚══════════════════════════════════════╝");
         System.out.println("  1) New Order");
         System.out.println("  0) Exit");
@@ -63,6 +63,7 @@ public class UserInterface {
     }
 
     // Order flow
+    // Handles the full customer ordering experience.
 
     private void processOrder() {
         Order order = new Order();
@@ -88,6 +89,8 @@ public class UserInterface {
         }
     }
 
+    // Order Screen
+    // Displays the customer's current order and menu options.
     private int showOrderScreen(Order order) {
         System.out.println("\n----------------------------------------");
         System.out.println("              ORDER SCREEN");
@@ -95,8 +98,8 @@ public class UserInterface {
 
         // Show current order snapshot (newest first)
         List<Sandwich> sandwiches = order.getSandwiches();
-        List<Drink>    drinks     = order.getDrinks();
-        List<Chips>    chipsList  = order.getChipsList();
+        List<Drink> drinks = order.getDrinks();
+        List<Chips> chipsList = order.getChipsList();
 
         if (!chipsList.isEmpty()) {
             System.out.println("Current Chips:");
@@ -131,8 +134,7 @@ public class UserInterface {
 
 
     // Add Sandwich
-
-
+    // Handles sandwich customization and topping selection.
     private void addSandwich(Order order) {
         System.out.println("\n===== BUILD YOUR SANDWICH =====");
 
@@ -165,27 +167,13 @@ public class UserInterface {
         boolean toasted = readYesNo();
 
         Sandwich sandwich = new Sandwich(bread, size, toasted);
-
-        // 4. Meats
-        promptForMeats(sandwich, size);
-
-        // 5. Cheeses
-        promptForCheeses(sandwich, size);
-
-        // 6. Regular toppings
-        promptForToppings(sandwich);
-
-        // 7. Sauces
-        promptForSauces(sandwich);
-
-        // 8. Sides
-        promptForSides(sandwich);
-
         order.addSandwich(sandwich);
         System.out.println("\nSandwich added to order!");
         System.out.println(sandwich.getSummary());
     }
 
+    // Meat Selection
+    // Allows customers to add meats and extra meat options.
     private void promptForMeats(Sandwich sandwich, int size) {
         System.out.println("\nAvailable meats (enter 0 when done):");
         for (int i = 0; i < MEATS.length; i++) {
@@ -194,6 +182,7 @@ public class UserInterface {
                     getMeatPrice(size, false),
                     getMeatPrice(size, true));
         }
+        // Continue allowing meat selection until user enters 0
         while (true) {
             System.out.print("Add meat (0 to skip/done): ");
             int choice = readInt();
@@ -202,6 +191,7 @@ public class UserInterface {
                 System.out.println("Invalid choice.");
                 continue;
             }
+            // Retrieve selected meat.
             String meat = MEATS[choice - 1];
             System.out.print("Extra " + meat + "? (yes/no): ");
             boolean extra = readYesNo();
@@ -210,6 +200,8 @@ public class UserInterface {
         }
     }
 
+    // Cheese Selection
+    // Allows customers to add cheeses and extra cheese options.
     private void promptForCheeses(Sandwich sandwich, int size) {
         System.out.println("\nAvailable cheeses (enter 0 when done):");
         for (int i = 0; i < CHEESES.length; i++) {
@@ -234,6 +226,8 @@ public class UserInterface {
         }
     }
 
+    // Regular Toppings Selection
+// Allows customers to add included sandwich toppings.
     private void promptForToppings(Sandwich sandwich) {
         System.out.println("\nRegular toppings (included, enter 0 when done):");
         for (int i = 0; i < TOPPINGS.length; i++) {
@@ -243,6 +237,7 @@ public class UserInterface {
             System.out.print("Add topping (0 to skip/done): ");
             int choice = readInt();
             if (choice == 0) break;
+            // Validate menu selection
             if (choice < 1 || choice > TOPPINGS.length) {
                 System.out.println("Invalid choice.");
                 continue;
@@ -252,6 +247,8 @@ public class UserInterface {
         }
     }
 
+    // Sauce Selection
+// Allows customers to add included sauces.
     private void promptForSauces(Sandwich sandwich) {
         System.out.println("\nSauces (included, enter 0 when done):");
         for (int i = 0; i < SAUCES.length; i++) {
@@ -270,11 +267,15 @@ public class UserInterface {
         }
     }
 
+    // Side Selection
+// Allows customers to add included side options.
     private void promptForSides(Sandwich sandwich) {
+        // Display available side options.
         System.out.println("\nSides (included, enter 0 when done):");
         for (int i = 0; i < SIDES.length; i++) {
             System.out.printf("  %d) %s%n", i + 1, SIDES[i]);
         }
+        // Continue allowing side selection until user enters 0.
         while (true) {
             System.out.print("Add side (0 to skip/done): ");
             int choice = readInt();
@@ -288,10 +289,10 @@ public class UserInterface {
         }
     }
 
-    // ---------------------------------------------------------------
-    // Add Drink
-    // ---------------------------------------------------------------
 
+    // Add Drink
+// Drink Ordering
+// Allows customers to add drinks to their order.
     private void addDrink(Order order) {
         System.out.println("\n===== ADD A DRINK =====");
         System.out.println("Select size:");
@@ -315,9 +316,10 @@ public class UserInterface {
         System.out.println("Drink added!");
     }
 
-    // ---------------------------------------------------------------
+
     // Add Chips
-    // ---------------------------------------------------------------
+// Chips Ordering
+// Allows customers to add chips to their order.
 
     private void addChips(Order order) {
         System.out.println("\n===== ADD CHIPS - $1.50 =====");
@@ -333,9 +335,10 @@ public class UserInterface {
         System.out.println(chipType + " chips added!");
     }
 
-    // ---------------------------------------------------------------
-    // Checkout
-    // ---------------------------------------------------------------
+
+    // Checkout Process
+// Validates the order and handles confirmation.
+
 
     private boolean checkout(Order order) {
         if (!order.isValid()) {
@@ -367,10 +370,9 @@ public class UserInterface {
         }
     }
 
-    // ---------------------------------------------------------------
-    // Helper input methods
-    // ---------------------------------------------------------------
 
+    //Helper Input Validation
+// Safely reads integer input from the user.
     private int readInt() {
         while (true) {
             try {
@@ -382,32 +384,53 @@ public class UserInterface {
         }
     }
 
+    // Yes/No Input Validation
+// Reads and validates yes/no responses.
+
     private boolean readYesNo() {
         while (true) {
             String input = scanner.nextLine().trim().toLowerCase();
             if (input.equals("yes") || input.equals("y")) return true;
-            if (input.equals("no")  || input.equals("n")) return false;
+            if (input.equals("no") || input.equals("n")) return false;
             System.out.print("Please enter yes or no: ");
         }
     }
 
-    // ---------------------------------------------------------------
     // Price helper (for display only)
-    // ---------------------------------------------------------------
+// Meat Pricing Helper
+// Returns meat pricing based on size and extra option.
 
     private double getMeatPrice(int size, boolean extra) {
         if (extra) {
-            return switch (size) { case 4 -> 0.50; case 8 -> 1.00; default -> 1.50; };
+            return switch (size) {
+                case 4 -> 0.50;
+                case 8 -> 1.00;
+                default -> 1.50;
+            };
         } else {
-            return switch (size) { case 4 -> 1.00; case 8 -> 2.00; default -> 3.00; };
+            return switch (size) {
+                case 4 -> 1.00;
+                case 8 -> 2.00;
+                default -> 3.00;
+            };
         }
     }
 
+    // Cheese Pricing Helper
+// Returns cheese pricing based on size and extra option.
     private double getCheesePrice(int size, boolean extra) {
         if (extra) {
-            return switch (size) { case 4 -> 0.30; case 8 -> 0.60; default -> 0.90; };
+            return switch (size) {
+                case 4 -> 0.30;
+                case 8 -> 0.60;
+                default -> 0.90;
+            };
         } else {
-            return switch (size) { case 4 -> 0.75; case 8 -> 1.50; default -> 2.25; };
+            return switch (size) {
+                case 4 -> 0.75;
+                case 8 -> 1.50;
+                default -> 2.25;
+            };
         }
     }
 }

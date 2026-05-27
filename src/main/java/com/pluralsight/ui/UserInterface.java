@@ -1,5 +1,6 @@
 package com.pluralsight.ui;
 
+import com.pluralsight.models.Drink;
 import com.pluralsight.models.Order;
 
 import java.util.Scanner;
@@ -296,6 +297,28 @@ private void promptForMeats(Sandwich sandwich, int size) {
             sandwich.addSide(SIDES[choice - 1]);
             System.out.println(SIDES[choice - 1] + " added.");
         }
+    }
+    private void addDrink(Order order) {
+        System.out.println("\n===== ADD A DRINK =====");
+        System.out.println("Select size:");
+        System.out.println("  1) Small  - $2.00");
+        System.out.println("  2) Medium - $2.50");
+        System.out.println("  3) Large  - $3.00");
+        System.out.print("Choice: ");
+        int sizeChoice = readInt();
+        Drink.Size size = switch (sizeChoice) {
+            case 1 -> Drink.Size.SMALL;
+            case 2 -> Drink.Size.MEDIUM;
+            case 3 -> Drink.Size.LARGE;
+            default -> Drink.Size.MEDIUM;
+        };
+
+        System.out.print("Enter drink flavor: ");
+        String flavor = scanner.nextLine().trim();
+        if (flavor.isEmpty()) flavor = "Cola";
+
+        order.addDrink(new Drink(size, flavor));
+        System.out.println("Drink added!");
     }
 
 }

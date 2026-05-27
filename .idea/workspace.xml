@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="&#10;Implemented promptForCheeses() to allow customers to customize sandwich cheeses. Added dynamic cheese pricing display based on sandwich size and extra portions. Integrated input validation and looping for multiple cheese selections. Added support for extra cheese customization with confirmation prompts.">
+    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="I Implemented promptForSides() to allow customers to add included side options to sandwiches. Added interactive side menu with support for multiple selections. Integrated input validation and confirmation messages for selected sides.">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/ui/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -259,11 +259,34 @@
       <option name="project" value="LOCAL" />
       <updated>1779893813456</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="I implemented promptForToppings() to allow customers to add included sandwich toppings.Added interactive topping menu with looping support for multiple selections. Integrated input validation and confirmation messages for selected toppings.">
+      <option name="closed" value="true" />
+      <created>1779893918826</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1779893918826</updated>
+    </task>
+    <task id="LOCAL-00027" summary="I implemented promptForSauces() to allow customers to add included sauces to sandwiches.Added interactive sauce menu with support for multiple selections.Integrated input validation and confirmation messages for selected sauces.">
+      <option name="closed" value="true" />
+      <created>1779893994749</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1779893994749</updated>
+    </task>
+    <task id="LOCAL-00028" summary="I Implemented promptForSides() to allow customers to add included side options to sandwiches. Added interactive side menu with support for multiple selections. Integrated input validation and confirmation messages for selected sides.">
+      <option name="closed" value="true" />
+      <created>1779894083046</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1779894083046</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created initial class structure for DELI-cious,Added package including ui,models and Util.I added foundational model classes including Drink,Sandwich, Chips,Topping,Userinterface,Order and ReceiptWriter." />
     <MESSAGE value="I created Sandwich class with bread type, size, and toasted properties" />
     <MESSAGE value="Add Topping class with topping types and extra topping support" />
     <MESSAGE value="Add Drink class with size and flavor properties&#10;Create Size enum with SMALL, MEDIUM, and LARGE options&#10;Implement constructor for drink initialization" />
@@ -286,6 +309,9 @@
     <MESSAGE value="Implement sandwich customization with bread and size selection&#10;Added interactive sandwich builder menu for customer customization.&#10;Implemented bread selection using predefined bread type options.&#10;Added sandwich size selection with pricing display for 4&quot;, 8&quot;, and 12&quot; sandwiches.Included default fallback values for invalid customer input handling." />
     <MESSAGE value="Add interactive meat selection and extra topping support&#10;Implemented promptForMeats() to allow customers to add meats to sandwiches.Added dynamic meat pricing display based on sandwich size and extra portions.Integrated input validation and looping for multiple meat selections.Added support for extra meat customization with confirmation prompts." />
     <MESSAGE value="&#10;Implemented promptForCheeses() to allow customers to customize sandwich cheeses. Added dynamic cheese pricing display based on sandwich size and extra portions. Integrated input validation and looping for multiple cheese selections. Added support for extra cheese customization with confirmation prompts." />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;Implemented promptForCheeses() to allow customers to customize sandwich cheeses. Added dynamic cheese pricing display based on sandwich size and extra portions. Integrated input validation and looping for multiple cheese selections. Added support for extra cheese customization with confirmation prompts." />
+    <MESSAGE value="I implemented promptForToppings() to allow customers to add included sandwich toppings.Added interactive topping menu with looping support for multiple selections. Integrated input validation and confirmation messages for selected toppings." />
+    <MESSAGE value="I implemented promptForSauces() to allow customers to add included sauces to sandwiches.Added interactive sauce menu with support for multiple selections.Integrated input validation and confirmation messages for selected sauces." />
+    <MESSAGE value="I Implemented promptForSides() to allow customers to add included side options to sandwiches. Added interactive side menu with support for multiple selections. Integrated input validation and confirmation messages for selected sides." />
+    <option name="LAST_COMMIT_MESSAGE" value="I Implemented promptForSides() to allow customers to add included side options to sandwiches. Added interactive side menu with support for multiple selections. Integrated input validation and confirmation messages for selected sides." />
   </component>
 </project>

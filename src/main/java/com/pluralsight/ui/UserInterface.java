@@ -335,5 +335,37 @@ private void promptForMeats(Sandwich sandwich, int size) {
         order.addChips(new Chips(chipType));
         System.out.println(chipType + " chips added!");
     }
+// Checkout
+
+
+    private boolean checkout(Order order) {
+        if (!order.isValid()) {
+            System.out.println("\nYour order is empty! Add at least one item before checking out.");
+            return false;
+        }
+
+        // Validation: 0-sandwich order must have chips or drink
+        if (order.getSandwiches().isEmpty()
+                && order.getDrinks().isEmpty()
+                && order.getChipsList().isEmpty()) {
+            System.out.println("\nPlease add at least one item to your order.");
+            return false;
+        }
+
+        System.out.println("\n" + order.getOrderSummary());
+        System.out.println("  1) Confirm Order");
+        System.out.println("  0) Cancel Order");
+        System.out.print("Choice: ");
+        int choice = readInt();
+
+        if (choice == 1) {
+            ReceiptWriter.saveReceipt(order);
+            System.out.println("\nOrder confirmed! Thank you for choosing DELI-cious!");
+            return true;
+        } else {
+            System.out.println("\nOrder cancelled.");
+            return true; // still return to home screen
+        }
+    }
 
 }

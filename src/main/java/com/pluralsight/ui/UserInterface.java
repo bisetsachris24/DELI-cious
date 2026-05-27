@@ -1,83 +1,67 @@
 package com.pluralsight.ui;
 
-import com.pluralsight.models.Drink;
-import com.pluralsight.models.Order;
+import com.pluralsight.models.*;
+import com.pluralsight.util.ReceiptWriter;
 
+import java.util.List;
 import java.util.Scanner;
 
 
+ // Handles all user-facing menus and input prompts for the DELI-cious POS system.
+
 public class UserInterface {
-    // Scanner object used to read user input from the console.
+
     private Scanner scanner;
 
 
     // Available options (for display)
-// Available bread choices for sandwiches.
+
     private static final String[] BREAD_TYPES = {"white", "wheat", "rye", "wrap"};
-    private static final String[] MEATS = {"steak", "ham", "salami", "roast beef", "chicken", "bacon"};
-    private static final String[] CHEESES = {"american", "provolone", "cheddar", "swiss"};
-    private static final String[] TOPPINGS = {"lettuce", "peppers", "onions", "tomatoes",
+    private static final String[] MEATS       = {"steak", "ham", "salami", "roast beef", "chicken", "bacon"};
+    private static final String[] CHEESES     = {"american", "provolone", "cheddar", "swiss"};
+    private static final String[] TOPPINGS    = {"lettuce", "peppers", "onions", "tomatoes",
             "jalapeños", "cucumbers", "pickles", "guacamole", "mushrooms"};
-    private static final String[] SAUCES = {"mayo", "mustard", "ketchup", "ranch",
+    private static final String[] SAUCES      = {"mayo", "mustard", "ketchup", "ranch",
             "thousand islands", "vinaigrette"};
-    private static final String[] SIDES = {"au jus", "sauce"};
-    private static final String[] CHIP_TYPES = {"Classic", "BBQ", "Sour Cream & Onion",
+    private static final String[] SIDES       = {"au jus", "sauce"};
+    private static final String[] CHIP_TYPES  = {"Classic", "BBQ", "Sour Cream & Onion",
             "Salt & Vinegar", "Jalapeño"};
 
-    //Creates a Scanner object for reading console input.
     public UserInterface() {
         this.scanner = new Scanner(System.in);
     }
 
-// Main application loop
-// Continuously displays the home screen until the user exits.
-
+    // Main run loop
 
     public void run() {
-
-        // Controls whether the application continues running.
         boolean running = true;
-
-        // Keep showing the menu while the program is active.
         while (running) {
-
-            // Display home screen options and get the user's choice.
             int choice = showHomeScreen();
-
-            // Process the selected menu option.
             switch (choice) {
-
-                // Start a new customer order.
                 case 1 -> processOrder();
-
-                // Exit the application.
                 case 0 -> {
-
-                    // Display goodbye message before closing.
-                    System.out.println(
-                            "\nThank you for visiting DELI-cious! Have a delicious day!");
-
+                    System.out.println("\nThank you for visiting DELI-cious! Have a delicious day!");
                     running = false;
                 }
-
-                // Handle invalid menu selections.
-                default -> System.out.println(
-                        "Invalid choice. Please try again.");
+                default -> System.out.println("Invalid choice. Please try again.");
             }
         }
     }
+
     // Home Screen
+
 
     private int showHomeScreen() {
         System.out.println("\n╔══════════════════════════════════════╗");
         System.out.println("║        Welcome to DELI-cious!        ║");
-        System.out.println("║     Your Custom Sandwich Shop        ║");
+        System.out.println("║     Your Custom Sandwich Shop 🥪     ║");
         System.out.println("╚══════════════════════════════════════╝");
         System.out.println("  1) New Order");
         System.out.println("  0) Exit");
         System.out.print("\nEnter your choice: ");
         return readInt();
     }
+
     // Order flow
 
     private void processOrder() {
@@ -111,8 +95,8 @@ public class UserInterface {
 
         // Show current order snapshot (newest first)
         List<Sandwich> sandwiches = order.getSandwiches();
-        List<Drink> drinks = order.getDrinks();
-        List<Chips> chipsList = order.getChipsList();
+        List<Drink>    drinks     = order.getDrinks();
+        List<Chips>    chipsList  = order.getChipsList();
 
         if (!chipsList.isEmpty()) {
             System.out.println("Current Chips:");
@@ -134,7 +118,6 @@ public class UserInterface {
             }
         }
 
-
         System.out.printf("%nRunning Total: $%.2f%n", order.getTotal());
         System.out.println("----------------------------------------");
         System.out.println("  1) Add Sandwich");
@@ -145,7 +128,10 @@ public class UserInterface {
         System.out.print("\nEnter your choice: ");
         return readInt();
     }
+
+
     // Add Sandwich
+
 
     private void addSandwich(Order order) {
         System.out.println("\n===== BUILD YOUR SANDWICH =====");
@@ -174,54 +160,54 @@ public class UserInterface {
             default -> 8;
         };
 
-    }
-    // 3. Toasted
+        // 3. Toasted
         System.out.print("\nWould you like it toasted? (yes/no): ");
-    boolean toasted = readYesNo();
+        boolean toasted = readYesNo();
 
-    Sandwich sandwich = new Sandwich(bread, size, toasted);
+        Sandwich sandwich = new Sandwich(bread, size, toasted);
 
-    // 4. Meats
-    promptForMeats(sandwich, size);
+        // 4. Meats
+        promptForMeats(sandwich, size);
 
-    // 5. Cheeses
-    promptForCheeses(sandwich, size);
+        // 5. Cheeses
+        promptForCheeses(sandwich, size);
 
-    // 6. Regular toppings
-    promptForToppings(sandwich);
+        // 6. Regular toppings
+        promptForToppings(sandwich);
 
-    // 7. Sauces
-    promptForSauces(sandwich);
+        // 7. Sauces
+        promptForSauces(sandwich);
 
-    // 8. Sides
-    promptForSides(sandwich);
+        // 8. Sides
+        promptForSides(sandwich);
 
         order.addSandwich(sandwich);
         System.out.println("\nSandwich added to order!");
         System.out.println(sandwich.getSummary());
-}
-
-private void promptForMeats(Sandwich sandwich, int size) {
-    System.out.println("\nAvailable meats (enter 0 when done):");
-    for (int i = 0; i < MEATS.length; i++) {
-        System.out.printf("  %d) %s ($%.2f | extra +$%.2f)%n",
-                i + 1, MEATS[i],
-                getMeatPrice(size, false),
-                getMeatPrice(size, true));
     }
-    while (true) {
-        System.out.print("Add meat (0 to skip/done): ");
-        int choice = readInt();
-        if (choice == 0) break;
-        if (choice < 1 || choice > MEATS.length) {
-            System.out.println("Invalid choice.");
-            continue;
+
+    private void promptForMeats(Sandwich sandwich, int size) {
+        System.out.println("\nAvailable meats (enter 0 when done):");
+        for (int i = 0; i < MEATS.length; i++) {
+            System.out.printf("  %d) %s ($%.2f | extra +$%.2f)%n",
+                    i + 1, MEATS[i],
+                    getMeatPrice(size, false),
+                    getMeatPrice(size, true));
         }
-        String meat = MEATS[choice - 1];
-        System.out.print("Extra " + meat + "? (yes/no): ");
-        boolean extra = readYesNo();
-        sandwich.addMeat(meat, extra);
-        System.out.println(meat + (extra ? " (extra)" : "") + " added.");
+        while (true) {
+            System.out.print("Add meat (0 to skip/done): ");
+            int choice = readInt();
+            if (choice == 0) break;
+            if (choice < 1 || choice > MEATS.length) {
+                System.out.println("Invalid choice.");
+                continue;
+            }
+            String meat = MEATS[choice - 1];
+            System.out.print("Extra " + meat + "? (yes/no): ");
+            boolean extra = readYesNo();
+            sandwich.addMeat(meat, extra);
+            System.out.println(meat + (extra ? " (extra)" : "") + " added.");
+        }
     }
 
     private void promptForCheeses(Sandwich sandwich, int size) {
@@ -247,6 +233,7 @@ private void promptForMeats(Sandwich sandwich, int size) {
             System.out.println(cheese + (extra ? " (extra)" : "") + " added.");
         }
     }
+
     private void promptForToppings(Sandwich sandwich) {
         System.out.println("\nRegular toppings (included, enter 0 when done):");
         for (int i = 0; i < TOPPINGS.length; i++) {
@@ -264,6 +251,7 @@ private void promptForMeats(Sandwich sandwich, int size) {
             System.out.println(TOPPINGS[choice - 1] + " added.");
         }
     }
+
     private void promptForSauces(Sandwich sandwich) {
         System.out.println("\nSauces (included, enter 0 when done):");
         for (int i = 0; i < SAUCES.length; i++) {
@@ -281,6 +269,7 @@ private void promptForMeats(Sandwich sandwich, int size) {
             System.out.println(SAUCES[choice - 1] + " added.");
         }
     }
+
     private void promptForSides(Sandwich sandwich) {
         System.out.println("\nSides (included, enter 0 when done):");
         for (int i = 0; i < SIDES.length; i++) {
@@ -298,6 +287,11 @@ private void promptForMeats(Sandwich sandwich, int size) {
             System.out.println(SIDES[choice - 1] + " added.");
         }
     }
+
+    // ---------------------------------------------------------------
+    // Add Drink
+    // ---------------------------------------------------------------
+
     private void addDrink(Order order) {
         System.out.println("\n===== ADD A DRINK =====");
         System.out.println("Select size:");
@@ -320,7 +314,10 @@ private void promptForMeats(Sandwich sandwich, int size) {
         order.addDrink(new Drink(size, flavor));
         System.out.println("Drink added!");
     }
-// Add chips
+
+    // ---------------------------------------------------------------
+    // Add Chips
+    // ---------------------------------------------------------------
 
     private void addChips(Order order) {
         System.out.println("\n===== ADD CHIPS - $1.50 =====");
@@ -335,8 +332,10 @@ private void promptForMeats(Sandwich sandwich, int size) {
         order.addChips(new Chips(chipType));
         System.out.println(chipType + " chips added!");
     }
-// Checkout
 
+    // ---------------------------------------------------------------
+    // Checkout
+    // ---------------------------------------------------------------
 
     private boolean checkout(Order order) {
         if (!order.isValid()) {
@@ -367,8 +366,10 @@ private void promptForMeats(Sandwich sandwich, int size) {
             return true; // still return to home screen
         }
     }
-// Helper input methods
 
+    // ---------------------------------------------------------------
+    // Helper input methods
+    // ---------------------------------------------------------------
 
     private int readInt() {
         while (true) {
@@ -389,8 +390,10 @@ private void promptForMeats(Sandwich sandwich, int size) {
             System.out.print("Please enter yes or no: ");
         }
     }
-    // Price helper (for display only)
 
+    // ---------------------------------------------------------------
+    // Price helper (for display only)
+    // ---------------------------------------------------------------
 
     private double getMeatPrice(int size, boolean extra) {
         if (extra) {

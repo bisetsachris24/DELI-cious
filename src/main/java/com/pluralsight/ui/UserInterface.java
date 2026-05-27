@@ -368,7 +368,7 @@ private void promptForMeats(Sandwich sandwich, int size) {
         }
     }
 // Helper input methods
-    // ---------------------------------------------------------------
+
 
     private int readInt() {
         while (true) {
@@ -387,6 +387,24 @@ private void promptForMeats(Sandwich sandwich, int size) {
             if (input.equals("yes") || input.equals("y")) return true;
             if (input.equals("no")  || input.equals("n")) return false;
             System.out.print("Please enter yes or no: ");
+        }
+    }
+    // Price helper (for display only)
+
+
+    private double getMeatPrice(int size, boolean extra) {
+        if (extra) {
+            return switch (size) { case 4 -> 0.50; case 8 -> 1.00; default -> 1.50; };
+        } else {
+            return switch (size) { case 4 -> 1.00; case 8 -> 2.00; default -> 3.00; };
+        }
+    }
+
+    private double getCheesePrice(int size, boolean extra) {
+        if (extra) {
+            return switch (size) { case 4 -> 0.30; case 8 -> 0.60; default -> 0.90; };
+        } else {
+            return switch (size) { case 4 -> 0.75; case 8 -> 1.50; default -> 2.25; };
         }
     }
 }

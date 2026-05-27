@@ -102,6 +102,7 @@ public class UserInterface {
             }
         }
     }
+
     private int showOrderScreen(Order order) {
         System.out.println("\n----------------------------------------");
         System.out.println("              ORDER SCREEN");
@@ -173,31 +174,32 @@ public class UserInterface {
         };
 
     }
-        // 3. Toasted
+    // 3. Toasted
         System.out.print("\nWould you like it toasted? (yes/no): ");
-        boolean toasted = readYesNo();
+    boolean toasted = readYesNo();
 
-        Sandwich sandwich = new Sandwich(bread, size, toasted);
+    Sandwich sandwich = new Sandwich(bread, size, toasted);
 
-        // 4. Meats
-        promptForMeats(sandwich, size);
+    // 4. Meats
+    promptForMeats(sandwich, size);
 
-        // 5. Cheeses
-        promptForCheeses(sandwich, size);
+    // 5. Cheeses
+    promptForCheeses(sandwich, size);
 
-        // 6. Regular toppings
-        promptForToppings(sandwich);
+    // 6. Regular toppings
+    promptForToppings(sandwich);
 
-        // 7. Sauces
-        promptForSauces(sandwich);
+    // 7. Sauces
+    promptForSauces(sandwich);
 
-        // 8. Sides
-        promptForSides(sandwich);
+    // 8. Sides
+    promptForSides(sandwich);
 
         order.addSandwich(sandwich);
         System.out.println("\nSandwich added to order!");
         System.out.println(sandwich.getSummary());
-    }
+}
+
 private void promptForMeats(Sandwich sandwich, int size) {
     System.out.println("\nAvailable meats (enter 0 when done):");
     for (int i = 0; i < MEATS.length; i++) {
@@ -221,5 +223,28 @@ private void promptForMeats(Sandwich sandwich, int size) {
         System.out.println(meat + (extra ? " (extra)" : "") + " added.");
     }
 
+    private void promptForCheeses(Sandwich sandwich, int size) {
+        System.out.println("\nAvailable cheeses (enter 0 when done):");
+        for (int i = 0; i < CHEESES.length; i++) {
+            System.out.printf("  %d) %s ($%.2f | extra +$%.2f)%n",
+                    i + 1, CHEESES[i],
+                    getCheesePrice(size, false),
+                    getCheesePrice(size, true));
+        }
+        while (true) {
+            System.out.print("Add cheese (0 to skip/done): ");
+            int choice = readInt();
+            if (choice == 0) break;
+            if (choice < 1 || choice > CHEESES.length) {
+                System.out.println("Invalid choice.");
+                continue;
+            }
+            String cheese = CHEESES[choice - 1];
+            System.out.print("Extra " + cheese + "? (yes/no): ");
+            boolean extra = readYesNo();
+            sandwich.addCheese(cheese, extra);
+            System.out.println(cheese + (extra ? " (extra)" : "") + " added.");
+        }
+    }
 
 }

@@ -1,0 +1,15 @@
+DELI-cious Receipt
+Date/Time: 05/27/2026 14:49:46
+
+========================================
+           ORDER SUMMARY
+========================================
+SANDWICHES (1):
+  --- Sandwich #1 ---
+  8" wheat sandwich [TOASTED]
+    Price: $7.00
+----------------------------------------
+  TOTAL: $7.00
+========================================
+
+Thank you for choosing DELI-cious!

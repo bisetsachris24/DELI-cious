@@ -167,6 +167,21 @@ public class UserInterface {
         boolean toasted = readYesNo();
 
         Sandwich sandwich = new Sandwich(bread, size, toasted);
+        // 4. Meats
+        promptForMeats(sandwich, size);
+
+        // 5. Cheeses
+        promptForCheeses(sandwich, size);
+
+        // 6. Regular toppings
+        promptForToppings(sandwich);
+
+        // 7. Sauces
+        promptForSauces(sandwich);
+
+        // 8. Sides
+        promptForSides(sandwich);
+
         order.addSandwich(sandwich);
         System.out.println("\nSandwich added to order!");
         System.out.println(sandwich.getSummary());

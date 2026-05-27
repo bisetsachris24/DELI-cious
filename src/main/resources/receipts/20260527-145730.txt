@@ -1,0 +1,24 @@
+DELI-cious Receipt
+Date/Time: 05/27/2026 14:57:30
+
+========================================
+           ORDER SUMMARY
+========================================
+SANDWICHES (1):
+  --- Sandwich #1 ---
+  4" white sandwich [TOASTED]
+    Meats: steak (extra)
+    Cheeses: american
+    Toppings: cucumbers
+    Sauces: ranch
+    Sides: sauce
+    Price: $6.75
+DRINKS:
+  Drink: Large Icetea  -  $3.00
+CHIPS:
+  Chips: Salt & Vinegar  -  $1.50
+----------------------------------------
+  TOTAL: $11.25
+========================================
+
+Thank you for choosing DELI-cious!

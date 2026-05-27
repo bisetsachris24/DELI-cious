@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Enhance order screen with running total and menu options&#10;Added real-time running total display for customer orders.&#10;Implemented order menu options for sandwiches, drinks, chips, checkout, and cancellation. Integrated user input handling with readInt() for menu navigation.">
+    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Implement sandwich customization with bread and size selection&#10;Added interactive sandwich builder menu for customer customization.&#10;Implemented bread selection using predefined bread type options.&#10;Added sandwich size selection with pricing display for 4&quot;, 8&quot;, and 12&quot; sandwiches.Included default fallback values for invalid customer input handling.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/ui/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -227,7 +228,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779822960513</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Enhance order screen with running total and menu options&#10;Added real-time running total display for customer orders.&#10;Implemented order menu options for sandwiches, drinks, chips, checkout, and cancellation. Integrated user input handling with readInt() for menu navigation.">
+      <option name="closed" value="true" />
+      <created>1779827878775</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1779827878775</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Implement sandwich customization with bread and size selection&#10;Added interactive sandwich builder menu for customer customization.&#10;Implemented bread selection using predefined bread type options.&#10;Added sandwich size selection with pricing display for 4&quot;, 8&quot;, and 12&quot; sandwiches.Included default fallback values for invalid customer input handling.">
+      <option name="closed" value="true" />
+      <created>1779828010654</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1779828010654</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -251,6 +268,7 @@
     <MESSAGE value="Implement customer order processing workflow&#10;Added processOrder() method to manage the full ordering process.&#10;Integrated options for adding sandwiches, drinks, and chips to an order.&#10;Implemented checkout flow with order completion validation.&#10;Added order cancellation support and invalid menu choice handling." />
     <MESSAGE value="Add dynamic order screen display for current customer items&#10;Implemented showOrderScreen() to display current sandwiches, drinks, and chips in the order. Added formatted order snapshot with newest items displayed first. Improved customer experience with organized order review during checkout flow." />
     <MESSAGE value="Enhance order screen with running total and menu options&#10;Added real-time running total display for customer orders.&#10;Implemented order menu options for sandwiches, drinks, chips, checkout, and cancellation. Integrated user input handling with readInt() for menu navigation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Enhance order screen with running total and menu options&#10;Added real-time running total display for customer orders.&#10;Implemented order menu options for sandwiches, drinks, chips, checkout, and cancellation. Integrated user input handling with readInt() for menu navigation." />
+    <MESSAGE value="Implement sandwich customization with bread and size selection&#10;Added interactive sandwich builder menu for customer customization.&#10;Implemented bread selection using predefined bread type options.&#10;Added sandwich size selection with pricing display for 4&quot;, 8&quot;, and 12&quot; sandwiches.Included default fallback values for invalid customer input handling." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement sandwich customization with bread and size selection&#10;Added interactive sandwich builder menu for customer customization.&#10;Implemented bread selection using predefined bread type options.&#10;Added sandwich size selection with pricing display for 4&quot;, 8&quot;, and 12&quot; sandwiches.Included default fallback values for invalid customer input handling." />
   </component>
 </project>

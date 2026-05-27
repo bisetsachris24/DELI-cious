@@ -172,6 +172,54 @@ public class UserInterface {
             default -> 8;
         };
 
+    }
+        // 3. Toasted
+        System.out.print("\nWould you like it toasted? (yes/no): ");
+        boolean toasted = readYesNo();
 
-    };
+        Sandwich sandwich = new Sandwich(bread, size, toasted);
+
+        // 4. Meats
+        promptForMeats(sandwich, size);
+
+        // 5. Cheeses
+        promptForCheeses(sandwich, size);
+
+        // 6. Regular toppings
+        promptForToppings(sandwich);
+
+        // 7. Sauces
+        promptForSauces(sandwich);
+
+        // 8. Sides
+        promptForSides(sandwich);
+
+        order.addSandwich(sandwich);
+        System.out.println("\nSandwich added to order!");
+        System.out.println(sandwich.getSummary());
+    }
+private void promptForMeats(Sandwich sandwich, int size) {
+    System.out.println("\nAvailable meats (enter 0 when done):");
+    for (int i = 0; i < MEATS.length; i++) {
+        System.out.printf("  %d) %s ($%.2f | extra +$%.2f)%n",
+                i + 1, MEATS[i],
+                getMeatPrice(size, false),
+                getMeatPrice(size, true));
+    }
+    while (true) {
+        System.out.print("Add meat (0 to skip/done): ");
+        int choice = readInt();
+        if (choice == 0) break;
+        if (choice < 1 || choice > MEATS.length) {
+            System.out.println("Invalid choice.");
+            continue;
+        }
+        String meat = MEATS[choice - 1];
+        System.out.print("Extra " + meat + "? (yes/no): ");
+        boolean extra = readYesNo();
+        sandwich.addMeat(meat, extra);
+        System.out.println(meat + (extra ? " (extra)" : "") + " added.");
+    }
+
+
 }

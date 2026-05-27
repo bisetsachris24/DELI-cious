@@ -280,5 +280,22 @@ private void promptForMeats(Sandwich sandwich, int size) {
             System.out.println(SAUCES[choice - 1] + " added.");
         }
     }
+    private void promptForSides(Sandwich sandwich) {
+        System.out.println("\nSides (included, enter 0 when done):");
+        for (int i = 0; i < SIDES.length; i++) {
+            System.out.printf("  %d) %s%n", i + 1, SIDES[i]);
+        }
+        while (true) {
+            System.out.print("Add side (0 to skip/done): ");
+            int choice = readInt();
+            if (choice == 0) break;
+            if (choice < 1 || choice > SIDES.length) {
+                System.out.println("Invalid choice.");
+                continue;
+            }
+            sandwich.addSide(SIDES[choice - 1]);
+            System.out.println(SIDES[choice - 1] + " added.");
+        }
+    }
 
 }

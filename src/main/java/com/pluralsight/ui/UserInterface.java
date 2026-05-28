@@ -2,6 +2,7 @@ package com.pluralsight.ui;
 
 import com.pluralsight.models.*;
 import com.pluralsight.util.ReceiptWriter;
+import com.pluralsight.models.PhillyCheeseSteak;
 
 import java.util.List;
 import java.util.Scanner;
@@ -80,6 +81,7 @@ public class UserInterface {
                         ordering = false;
                     }
                 }
+                case 5 -> addSignatureSandwich(order);
                 case 0 -> {
                     System.out.println("\nOrder cancelled. Returning to Home Screen.");
                     ordering = false;
@@ -89,6 +91,113 @@ public class UserInterface {
         }
     }
 
+    private void addSignatureSandwich(Order order) {
+            System.out.println("\n===== SIGNATURE SANDWICHES ★ =====");
+            System.out.println("Pre-built recipes — customize after selecting.\n");
+
+            System.out.println("  1) Philly Cheese Steak");
+            System.out.println("     8\" white | Steak | American | Peppers | Mayo | Toasted");
+            System.out.printf("     Price: $%.2f%n%n", new PhillyCheeseSteak().getPrice());
+
+            System.out.println("  0) Back");
+            System.out.print("Select a signature sandwich: ");
+
+            int choice = readInt();   // ← this was missing
+
+            switch (choice) {
+                case 1 -> {
+                    Sandwich sandwich = new PhillyCheeseSteak();
+                    System.out.println("\nStarting recipe:");
+                    System.out.println(sandwich.getSummary());
+                    customizeSignatureSandwich(sandwich);
+                    order.addSandwich(sandwich);
+                    System.out.println("\nPhilly Cheese Steak added to your order!");
+                    System.out.println(sandwich.getSummary());
+                }
+                case 0 -> System.out.println("Returning to order screen.");
+                default -> System.out.println("Invalid choice. Returning to order screen.");
+            }
+        }
+
+    // Customize Signature Sandwich
+// Lets the customer add or remove toppings from the pre-built template.
+    private void customizeSignatureSandwich(Sandwich sandwich) {
+        System.out.println("===== CUSTOMIZE YOUR SANDWICH =====");
+
+        boolean customizing = true;
+        while (customizing) {
+            System.out.println("\nCurrent sandwich:");
+            System.out.println(sandwich.getSummary());
+            System.out.println("  1) Remove a topping");
+            System.out.println("  2) Add a meat");
+            System.out.println("  3) Add a cheese");
+            System.out.println("  4) Add a regular topping");
+            System.out.println("  5) Add a sauce");
+            System.out.println("  0) Done");
+            System.out.print("Choice: ");
+
+            switch (readInt()) {
+                case 1 -> promptRemoveTopping(sandwich);
+                case 2 -> promptForMeats(sandwich, sandwich.getSize());
+                case 3 -> promptForCheeses(sandwich, sandwich.getSize());
+                case 4 -> promptForToppings(sandwich);
+                case 5 -> promptForSauces(sandwich);
+                case 0 -> customizing = false;
+                default -> System.out.println("Invalid choice.");
+            }
+        }
+    }
+
+    // Remove Topping
+// Shows all current toppings and lets the customer remove one.
+    private void promptRemoveTopping(Sandwich sandwich) {
+        System.out.println("\nSelect a topping to remove:");
+
+        int index = 1;
+        System.out.println("  -- Meats --");
+        for (Topping t : sandwich.getMeats())           System.out.printf("  %d) %s%n", index++, t.getName());
+        System.out.println("  -- Cheeses --");
+        for (Topping t : sandwich.getCheeses())         System.out.printf("  %d) %s%n", index++, t.getName());
+        System.out.println("  -- Toppings --");
+        for (Topping t : sandwich.getRegularToppings()) System.out.printf("  %d) %s%n", index++, t.getName());
+        System.out.println("  -- Sauces --");
+        for (Topping t : sandwich.getSauces())          System.out.printf("  %d) %s%n", index++, t.getName());
+
+        if (index == 1) { System.out.println("Nothing to remove."); return; }
+
+        System.out.print("Enter number to remove (0 to cancel): ");
+        int choice = readInt();
+        if (choice == 0 || choice >= index) return;
+
+        // Find the name first, THEN remove after iteration ends
+
+        int pos = 1;
+        String toRemove = null;
+        String category = null;
+
+        for (Topping t : sandwich.getMeats()) {
+            if (pos++ == choice) { toRemove = t.getName(); category = "meat"; break; }
+        }
+        if (toRemove == null) for (Topping t : sandwich.getCheeses()) {
+            if (pos++ == choice) { toRemove = t.getName(); category = "cheese"; break; }
+        }
+        if (toRemove == null) for (Topping t : sandwich.getRegularToppings()) {
+            if (pos++ == choice) { toRemove = t.getName(); category = "topping"; break; }
+        }
+        if (toRemove == null) for (Topping t : sandwich.getSauces()) {
+            if (pos++ == choice) { toRemove = t.getName(); category = "sauce"; break; }
+        }
+
+        if (toRemove == null) { System.out.println("Not found."); return; }
+
+        switch (category) {
+            case "meat"    -> sandwich.removeMeat(toRemove);
+            case "cheese"  -> sandwich.removeCheese(toRemove);
+            case "topping" -> sandwich.removeTopping(toRemove);
+            case "sauce"   -> sandwich.removeSauce(toRemove);
+        }
+        System.out.println(toRemove + " removed.");
+    }
     // Order Screen
     // Displays the customer's current order and menu options.
     private int showOrderScreen(Order order) {

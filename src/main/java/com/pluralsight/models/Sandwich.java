@@ -86,7 +86,28 @@ public class Sandwich {
                 sideName,
                 Topping.ToppingType.SIDE));
     }
+    // Removes the first meat with the given name .
+    // @return true if a topping was removed, false if not found
 
+
+    public boolean removeMeat(String meatName) {
+        return meats.removeIf(t -> t.getName().equalsIgnoreCase(meatName));
+    }
+    public boolean removeCheese(String cheeseName) {
+        return cheeses.removeIf(t -> t.getName().equalsIgnoreCase(cheeseName));
+    }
+
+    public boolean removeTopping(String toppingName) {
+        return regularToppings.removeIf(t -> t.getName().equalsIgnoreCase(toppingName));
+    }
+
+    public boolean removeSauce(String sauceName) {
+        return sauces.removeIf(t -> t.getName().equalsIgnoreCase(sauceName));
+    }
+
+    public boolean removeSide(String sideName) {
+        return sides.removeIf(t -> t.getName().equalsIgnoreCase(sideName));
+    }
     // Price calculation
     // Calculates the total sandwich price by adding topping prices to the base sandwich price.
 

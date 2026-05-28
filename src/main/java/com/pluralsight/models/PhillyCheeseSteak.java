@@ -8,7 +8,7 @@ public class PhillyCheeseSteak extends Sandwich {
         // 8-inch white bread, toasted
         super("white", 8, true);
 
-        // Pre-load the Philly recipe
+        // Preload the Philly recipe
         addMeat("steak", false);
         addCheese("american", false);
         addTopping("peppers");

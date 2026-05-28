@@ -1,0 +1,22 @@
+DELI-cious Receipt
+Date/Time: 05/28/2026 12:56:12
+
+========================================
+           ORDER SUMMARY
+========================================
+SANDWICHES (1):
+  --- Sandwich #1 ---
+  [Signature: Philly Cheese Steak]
+  8" white sandwich [TOASTED]
+    Meats: steak
+    Toppings: peppers, onions
+    Sauces: mayo
+    Price: $9.00
+CHIPS:
+  Chips: Classic  -  $1.50
+  Chips: Jalapeño  -  $1.50
+----------------------------------------
+  TOTAL: $12.00
+========================================
+
+Thank you for choosing DELI-cious!

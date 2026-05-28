@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="I added another option signature sandwich System.out.println(&quot;  5) Add Signature Sandwich  ★&quot;);">
+    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Add sandwich customization menu for signature sandwiches&#10;Implement topping removal functionality with category handling.Prevent ConcurrentModificationException during topping removal">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/PhillyCheeseSteak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/PhillyCheeseSteak.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Sandwich.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/models/Sandwich.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/ui/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,23 +26,24 @@
         <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src/main/java/com/pluralsight" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "bisetsachris24"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;bisetsachris24&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/bisetsachris24/DELI-cious.git",
-    "accountId": "c67b3b2f-ef67-4c64-bcee-bb3cb2ddf911"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/bisetsachris24/DELI-cious.git&quot;,
+    &quot;accountId&quot;: &quot;c67b3b2f-ef67-4c64-bcee-bb3cb2ddf911&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="3E5964rQd1QuetXTlrkCxHgwiMT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -55,8 +54,15 @@
     "Application.main.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "DeliApp",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ]
   }
 }]]></component>
   <component name="RunManager">
@@ -407,11 +413,29 @@
       <option name="project" value="LOCAL" />
       <updated>1779984694133</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Add sandwich customization menu for signature sandwiches&#10;Implement topping removal functionality with category handling.Prevent ConcurrentModificationException during topping removal">
+      <option name="closed" value="true" />
+      <created>1779988140301</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1779988140301</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implement receipt file generation and order saving&#10;Added logic to create uniquely named receipt files using timestamps.&#10;Implemented receipt writing with order summary, date/time, and thank-you message.Used BufferedWriter with try-with-resources for safe file handling.Added exception handling for receipt saving errors and success confirmation messages." />
     <MESSAGE value="Add timestamp formatting for unique receipt filenames&#10;Implemented DateTimeFormatter with custom yyyyMMdd-HHmmss pattern.&#10;Generated formatted timestamps using LocalDateTime for receipt file naming. Ensured unique and organized receipt filenames based on date and time." />
     <MESSAGE value="Set up UserInterface menu options and input handling&#10;Added Scanner support for reading customer input from the console.&#10;Created predefined menu option arrays for breads, meats, cheeses, toppings, sauces, sides, and chips. Initialized UserInterface constructor for interactive order processing." />
     <MESSAGE value="Set up UserInterface menu options and input handling&#10;Added Scanner support for reading customer input from the console.&#10;Created predefined menu option arrays for breads, meats, cheeses, toppings, sauces, sides, and chips. Initialized UserInterface constructor for interactive order processing. added comments" />
@@ -436,6 +460,7 @@
     <MESSAGE value="Add PhillyCheeseSteak signature sandwich with default toppings" />
     <MESSAGE value="Add getSignatureName and override getSummary methods" />
     <MESSAGE value="I added another option signature sandwich System.out.println(&quot;  5) Add Signature Sandwich  ★&quot;);" />
-    <option name="LAST_COMMIT_MESSAGE" value="I added another option signature sandwich System.out.println(&quot;  5) Add Signature Sandwich  ★&quot;);" />
+    <MESSAGE value="Add sandwich customization menu for signature sandwiches&#10;Implement topping removal functionality with category handling.Prevent ConcurrentModificationException during topping removal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add sandwich customization menu for signature sandwiches&#10;Implement topping removal functionality with category handling.Prevent ConcurrentModificationException during topping removal" />
   </component>
 </project>

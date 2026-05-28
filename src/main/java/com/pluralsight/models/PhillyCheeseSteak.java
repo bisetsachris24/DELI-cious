@@ -14,4 +14,14 @@ public class PhillyCheeseSteak extends Sandwich {
         addTopping("peppers");
         addSauce("mayo");
     }
+    //Returns the signature sandwich name. Useful for display in menus.
+
+    public String getSignatureName() {
+        return SIGNATURE_NAME;
+    }
+
+    @Override
+    public String getSummary() {
+        return "  [Signature: " + SIGNATURE_NAME + "]\n" + super.getSummary();
+    }
 }

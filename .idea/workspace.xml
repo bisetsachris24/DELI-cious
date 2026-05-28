@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Add helper methods for meat and cheese pricing display&#10;&#10;Implemented getMeatPrice() and getCheesePrice() methods for dynamic topping price calculations.&#10;Added pricing support based on sandwich size and extra topping selections.&#10;Improved menu display by showing accurate meat and cheese pricing during customization.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/ui/UserInterface.java" afterDir="false" />
-    </list>
+    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Final touches" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -360,11 +357,18 @@
       <option name="project" value="LOCAL" />
       <updated>1779902947773</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Final touches">
+      <option name="closed" value="true" />
+      <created>1779913238801</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1779913238801</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Build customizable Sandwich model with toppings and pricing system&#10;Implemented sandwich customization with bread type, size, toasted option, and categorized toppings. Added support for meats, cheeses, regular toppings, sauces, and sides using ArrayLists. Created dynamic pricing logic based on sandwich size and premium toppings.Implemented formatted order summary generation for receipts and customer orders. Added validation for sandwich sizes and getter methods for encapsulation." />
     <MESSAGE value="Create Order class to manage customer purchases&#10;Added ArrayLists to store sandwiches, drinks, and chips within an order.&#10;Implemented Order constructor to initialize all order item collections.&#10;Prepared foundation for handling customer order totals and receipt generation." />
     <MESSAGE value="Implemented getTotal() method to calculate the complete order price from sandwiches, drinks, and chips. Added order validation to ensure customers cannot place empty orders. Supported flexible ordering by allowing orders with sandwiches, drinks, or chips combinations." />
     <MESSAGE value="Added getOrderSummary() method to display a complete customer receipt.&#10;Included detailed sections for sandwiches, drinks, and chips with item summaries.Implemented dynamic total calculation display and empty-order handling for sandwiches. Improved order readability with formatted headers, separators, and item numbering." />
@@ -389,6 +393,7 @@
     <MESSAGE value="Add helper methods for meat and cheese pricing display&#10;Implemented getMeatPrice() and getCheesePrice() methods for dynamic topping price calculations.Added pricing support based on sandwich size and extra topping selections. Improved menu display by showing accurate meat and cheese pricing during customization." />
     <MESSAGE value="final touches" />
     <MESSAGE value="Add helper methods for meat and cheese pricing display&#10;&#10;Implemented getMeatPrice() and getCheesePrice() methods for dynamic topping price calculations.&#10;Added pricing support based on sandwich size and extra topping selections.&#10;Improved menu display by showing accurate meat and cheese pricing during customization." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add helper methods for meat and cheese pricing display&#10;&#10;Implemented getMeatPrice() and getCheesePrice() methods for dynamic topping price calculations.&#10;Added pricing support based on sandwich size and extra topping selections.&#10;Improved menu display by showing accurate meat and cheese pricing during customization." />
+    <MESSAGE value="Final touches" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final touches" />
   </component>
 </project>

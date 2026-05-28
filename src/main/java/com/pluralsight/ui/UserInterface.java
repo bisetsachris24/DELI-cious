@@ -127,6 +127,7 @@ public class UserInterface {
         System.out.println("  2) Add Drink");
         System.out.println("  3) Add Chips");
         System.out.println("  4) Checkout");
+        System.out.println("  5) Add Signature Sandwich  ★");
         System.out.println("  0) Cancel Order");
         System.out.print("\nEnter your choice: ");
         return readInt();

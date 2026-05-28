@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Final touches" />
+    <list default="true" id="766d615e-d45f-4247-8709-a266a4533413" name="Changes" comment="Add getSignatureName and override getSummary methods" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -365,13 +365,34 @@
       <option name="project" value="LOCAL" />
       <updated>1779913238801</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Bonus, I created Philly Cheese Steak signature sandwich class.Implement pre-built Philly Cheese Steak sandwich, Add customizable Philly Cheese Steak sandwich template">
+      <option name="closed" value="true" />
+      <created>1779984443329</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1779984443329</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Add PhillyCheeseSteak signature sandwich with default toppings">
+      <option name="closed" value="true" />
+      <created>1779984521570</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1779984521570</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Add getSignatureName and override getSummary methods">
+      <option name="closed" value="true" />
+      <created>1779984588694</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1779984588694</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create Order class to manage customer purchases&#10;Added ArrayLists to store sandwiches, drinks, and chips within an order.&#10;Implemented Order constructor to initialize all order item collections.&#10;Prepared foundation for handling customer order totals and receipt generation." />
-    <MESSAGE value="Implemented getTotal() method to calculate the complete order price from sandwiches, drinks, and chips. Added order validation to ensure customers cannot place empty orders. Supported flexible ordering by allowing orders with sandwiches, drinks, or chips combinations." />
-    <MESSAGE value="Added getOrderSummary() method to display a complete customer receipt.&#10;Included detailed sections for sandwiches, drinks, and chips with item summaries.Implemented dynamic total calculation display and empty-order handling for sandwiches. Improved order readability with formatted headers, separators, and item numbering." />
     <MESSAGE value="Add getter methods for order item collections&#10;Implemented getters for sandwiches, drinks, and chips lists.&#10;Improved encapsulation and external access to order data.&#10;Prepared Order class for receipt generation and order management features." />
     <MESSAGE value="Implement receipt file generation and order saving&#10;Added logic to create uniquely named receipt files using timestamps.&#10;Implemented receipt writing with order summary, date/time, and thank-you message.Used BufferedWriter with try-with-resources for safe file handling.Added exception handling for receipt saving errors and success confirmation messages." />
     <MESSAGE value="Add timestamp formatting for unique receipt filenames&#10;Implemented DateTimeFormatter with custom yyyyMMdd-HHmmss pattern.&#10;Generated formatted timestamps using LocalDateTime for receipt file naming. Ensured unique and organized receipt filenames based on date and time." />
@@ -394,6 +415,9 @@
     <MESSAGE value="final touches" />
     <MESSAGE value="Add helper methods for meat and cheese pricing display&#10;&#10;Implemented getMeatPrice() and getCheesePrice() methods for dynamic topping price calculations.&#10;Added pricing support based on sandwich size and extra topping selections.&#10;Improved menu display by showing accurate meat and cheese pricing during customization." />
     <MESSAGE value="Final touches" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final touches" />
+    <MESSAGE value="Bonus, I created Philly Cheese Steak signature sandwich class.Implement pre-built Philly Cheese Steak sandwich, Add customizable Philly Cheese Steak sandwich template" />
+    <MESSAGE value="Add PhillyCheeseSteak signature sandwich with default toppings" />
+    <MESSAGE value="Add getSignatureName and override getSummary methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add getSignatureName and override getSummary methods" />
   </component>
 </project>

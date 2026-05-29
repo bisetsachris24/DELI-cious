@@ -1,0 +1,24 @@
+DELI-cious Receipt
+Date/Time: 05/29/2026 09:45:26
+
+========================================
+           ORDER SUMMARY
+========================================
+SANDWICHES (1):
+  --- Sandwich #1 ---
+  8" white sandwich [TOASTED]
+    Meats: steak (extra)
+    Cheeses: american
+    Toppings: lettuce
+    Sauces: mayo
+    Sides: sauce
+    Price: $9.50
+DRINKS:
+  Drink: Medium Ice Tea  -  $2.50
+CHIPS:
+  Chips: Salt & Vinegar  -  $1.50
+----------------------------------------
+  TOTAL: $13.50
+========================================
+
+Thank you for choosing DELI-cious!
